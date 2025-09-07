@@ -7,6 +7,7 @@ export default function Pricing() {
     const premiumFeatures = [
         "Acesso vitalício completo",
         "Curso iPhone, Xiaomi e Samsung",
+        "Desbloqueios de notebooks",
         "Mentoria exclusiva para faturar 10k",
         "Suporte individual via AnyDesk",
         "Grupo VIP + servidores premium",
