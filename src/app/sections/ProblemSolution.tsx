@@ -16,7 +16,7 @@ export default function ProblemSolution() {
                             <div className="mx-auto bg-destructive/10 rounded-full p-3 w-fit">
                                 <XCircle className="h-8 w-8 text-destructive" />
                             </div>
-                            <CardTitle className="font-headline pt-4">💸 O Problema</CardTitle>
+                            <CardTitle className="font-headline pt-4">❌ O Problema</CardTitle>
                         </CardHeader>
                         <CardContent>
                             <p className="text-muted-foreground">Terceirizar desbloqueios = perder até 90% do lucro que poderia ser seu.</p>
