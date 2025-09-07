@@ -19,7 +19,7 @@ export default function ProblemSolution() {
                             <CardTitle className="font-headline pt-4">💸 O Problema</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-muted-foreground">Terceirizar desbloqueios = perder 70% do lucro que poderia ser seu.</p>
+                            <p className="text-muted-foreground">Terceirizar desbloqueios = perder até 90% do lucro que poderia ser seu.</p>
                         </CardContent>
                     </Card>
                     <Card className="text-center shadow-lg border-primary/50">
