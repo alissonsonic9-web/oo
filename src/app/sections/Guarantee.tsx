@@ -10,8 +10,8 @@ export default function Guarantee() {
                             <svg viewBox="0 0 100 100" className="w-full h-full animate-spin [animation-duration:20s]">
                                 <path id="circlePath" fill="none" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                                 <text>
-                                    <textPath href="#circlePath" className="text-sm font-bold uppercase tracking-wider fill-current text-muted-foreground">
-                                        GARANTIA DE 7 DIAS • 
+                                    <textPath href="#circlePath" className="text-sm font-bold uppercase tracking-wider fill-current text-muted-foreground" textLength="232.5">
+                                        GARANTIA DE 7 DIAS • GARANTIA DE 7 DIAS •
                                     </textPath>
                                 </text>
                             </svg>
