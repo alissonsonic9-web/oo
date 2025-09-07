@@ -11,7 +11,7 @@ export default function Guarantee() {
                                 <path id="circlePath" fill="none" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                                 <text>
                                     <textPath href="#circlePath" className="text-sm font-bold uppercase tracking-wider fill-current text-muted-foreground">
-                                        GARANTIA DE 7 DIAS • SATISFAÇÃO GARANTIDA • GARANTIA DE 7 DIAS • SATISFAÇÃO GARANTIDA •
+                                        GARANTIA DE 7 DIAS • GARANTIA GARANTIDA • GARANTIA DE 7 DIAS • GARANTIA GARANTIDA •
                                     </textPath>
                                 </text>
                             </svg>
@@ -22,7 +22,7 @@ export default function Guarantee() {
                             </div>
                         </div>
                     </div>
-                    <div className="space-y-4 text-center md:text-left">
+                    <div className="space-y-4 text-center md-text-left">
                         <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">Garantia Incondicional de 7 Dias</h2>
                         <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto md:mx-0">
                             Se dentro de 7 dias você não ficar satisfeito, devolvemos 100% do valor.
