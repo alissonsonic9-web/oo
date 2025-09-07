@@ -2,10 +2,10 @@ import { Rocket, Users, BarChart, Clock, ThumbsUp } from 'lucide-react';
 
 export default function Community() {
     const stats = [
-        { icon: Users, value: "+1.000", label: "Membros ativos crescendo mensalmente" },
+        { icon: Users, value: "+3.700", label: "Membros ativos crescendo mensalmente" },
         { icon: BarChart, value: "R$10.000+", label: "Faturamento médio por aluno" },
         { icon: Clock, value: "24/7", label: "Suporte disponível" },
-        { icon: ThumbsUp, value: "95%", label: "Satisfação comprovada" },
+        { icon: ThumbsUp, value: "99%", label: "Satisfação comprovada" },
     ];
 
     return (
@@ -19,7 +19,7 @@ export default function Community() {
                             Comunidade Ativa Experts Destrava Tech
                         </h2>
                         <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                            Resultados comprovados por mais de 1000 alunos. Junte-se à comunidade que mais cresce no Brasil.
+                            Resultados comprovados por mais de 3.700 alunos. Junte-se à comunidade que mais cresce no Brasil.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-8">
