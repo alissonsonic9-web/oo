@@ -30,7 +30,7 @@ export default function ProblemSolution() {
                             <CardTitle className="font-headline pt-4">✅ A Solução</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-muted-foreground">Domine desbloqueios e multiplique seus ganhos, sem dependência.</p>
+                            <p className="text-muted-foreground">Existe uma oportunidade pouco conhecida, onde quem domina essas técnicas transforma desbloqueios em renda quase secreta. Poucos sabem, mas quem aprende, fatura alto.</p>
                         </CardContent>
                     </Card>
                     <Card className="text-center shadow-lg border-primary/50">
@@ -41,7 +41,7 @@ export default function ProblemSolution() {
                             <CardTitle className="font-headline pt-4">💸 O Lucro</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-muted-foreground">Cada aparelho = centenas de reais a mais no seu bolso.</p>
+                            <p className="text-muted-foreground">Cada aparelho = centenas de reais a mais no seu bolso, acumulando ganhos que podem surpreender já nos primeiros dias.</p>
                         </CardContent>
                     </Card>
                 </div>
