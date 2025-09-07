@@ -8,10 +8,10 @@ export default function Guarantee() {
                     <div className="flex justify-center items-center">
                         <div className="relative w-64 h-64 md:w-80 md:h-80">
                             <svg viewBox="0 0 100 100" className="w-full h-full animate-spin [animation-duration:20s]">
-                                <path id="circlePath" fill="none" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                                <path id="circlePath" fill="none" d="M 50, 50 m -42, 0 a 42,42 0 1,1 84,0 a 42,42 0 1,1 -84,0" />
                                 <text>
-                                    <textPath href="#circlePath" className="text-sm font-bold uppercase tracking-wider fill-current text-muted-foreground" textLength="232.5">
-                                        GARANTIA DE 7 DIAS • GARANTIA DE 7 DIAS •
+                                    <textPath href="#circlePath" className="text-sm font-bold uppercase tracking-[0.2em] fill-current text-muted-foreground" textLength="264">
+                                        GARANTIA DE 7 DIAS • GARANTIA DE 7 DIAS
                                     </textPath>
                                 </text>
                             </svg>
