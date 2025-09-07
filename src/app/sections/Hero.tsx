@@ -38,7 +38,7 @@ export default function Hero() {
           </ul>
           <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
             <Button asChild size="lg" className="font-bold text-lg py-7 px-8">
-              <Link href="#bonuses">QUERO ACESSAR OS BÔNUS EXCLUSIVOS</Link>
+              <Link href="#pricing">QUERO APRENDER AGORA!</Link>
             </Button>
           </div>
         </div>
