@@ -22,7 +22,7 @@ export default function Guarantee() {
                             </div>
                         </div>
                     </div>
-                    <div className="space-y-4 text-center md-text-left">
+                    <div className="space-y-4 text-center md:text-left">
                         <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl">Garantia Incondicional de 7 Dias</h2>
                         <p className="text-muted-foreground md:text-xl max-w-2xl mx-auto md:mx-0">
                             Se dentro de 7 dias você não ficar satisfeito, devolvemos 100% do valor.
