@@ -22,21 +22,21 @@ export default function Hero() {
               Está cansado de pagar caro para terceiros desbloquearem iPhone, Xiaomi ou Samsung? Aprenda você mesmo e transforme cada desbloqueio em lucro direto no seu bolso!
             </p>
           </div>
-          <ul className="grid gap-4 text-lg sm:grid-cols-3 text-gray-200">
-              <li className="flex items-center justify-center gap-3">
+          <ul className="grid gap-4 text-lg sm:grid-cols-3 text-gray-200 w-full max-w-5xl">
+              <li className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                   <LockOpen className="h-5 w-5 text-primary" />
                   <span className="font-medium">Desbloqueios práticos e rápidos</span>
               </li>
-              <li className="flex items-center justify-center gap-3">
+              <li className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                   <DollarSign className="h-5 w-5 text-primary" />
                   <span className="font-medium">Lucre até R$10.000,00</span>
               </li>
-              <li className="flex items-center justify-center gap-3">
+              <li className="flex items-center justify-center gap-3 bg-white/10 backdrop-blur-sm p-4 rounded-lg">
                   <BookOpen className="h-5 w-5 text-primary" />
                   <span className="font-medium">Tudo em um único curso completo</span>
               </li>
           </ul>
-          <div className="flex flex-col gap-2 min-[400px]:flex-row">
+          <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
             <Button asChild size="lg" className="font-bold text-lg py-7 px-8">
               <Link href="#bonuses">QUERO ACESSAR OS BÔNUS EXCLUSIVOS</Link>
             </Button>
