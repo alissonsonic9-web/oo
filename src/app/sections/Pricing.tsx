@@ -31,7 +31,7 @@ export default function Pricing() {
                         </CardHeader>
                         <CardContent className="flex-1">
                             <ul className="space-y-2 text-muted-foreground">
-                                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Curso + Comunidade Unlocker</li>
+                                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Curso + Comunidade Destrava Tech</li>
                                 <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> 3 meses de acesso completo</li>
                                 <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Suporte via WhatsApp</li>
                                 <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Garantia de 7 dias</li>

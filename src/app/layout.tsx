@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Unlocker Pro',
+  title: 'Destrava Tech',
   description: 'Aprenda a Desbloquear Celulares e transforme conhecimento em lucro.',
 };
 

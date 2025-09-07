@@ -16,7 +16,7 @@ export default function Community() {
                         <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary">Comunidade</div>
                         <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-4xl md:text-5xl">
                             <Rocket className="inline-block h-10 w-10 mr-2 text-primary" />
-                            Comunidade Ativa Experts Unlocker
+                            Comunidade Ativa Experts Destrava Tech
                         </h2>
                         <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                             Resultados comprovados por mais de 1000 alunos. Junte-se à comunidade que mais cresce no Brasil.
