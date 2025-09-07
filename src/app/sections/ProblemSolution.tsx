@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { XCircle, TrendingDown, CheckCircle } from 'lucide-react';
+import { XCircle, CheckCircle, DollarSign } from 'lucide-react';
 
 export default function ProblemSolution() {
     return (
@@ -22,17 +22,6 @@ export default function ProblemSolution() {
                             <p className="text-muted-foreground">Terceirizar desbloqueios = perder até 90% do lucro que poderia ser seu.</p>
                         </CardContent>
                     </Card>
-                    <Card className="text-center shadow-lg border-primary/50">
-                        <CardHeader>
-                            <div className="mx-auto bg-primary/10 rounded-full p-3 w-fit">
-                                <TrendingDown className="h-8 w-8 text-primary" />
-                            </div>
-                            <CardTitle className="font-headline pt-4">📉 A Perda</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-muted-foreground">Cada aparelho = centenas de reais a menos no seu bolso.</p>
-                        </CardContent>
-                    </Card>
                     <Card className="text-center shadow-lg border-accent/50">
                         <CardHeader>
                             <div className="mx-auto bg-accent/10 rounded-full p-3 w-fit">
@@ -42,6 +31,17 @@ export default function ProblemSolution() {
                         </CardHeader>
                         <CardContent>
                             <p className="text-muted-foreground">Domine desbloqueios e multiplique seus ganhos, sem dependência.</p>
+                        </CardContent>
+                    </Card>
+                    <Card className="text-center shadow-lg border-primary/50">
+                        <CardHeader>
+                             <div className="mx-auto bg-primary/10 rounded-full p-3 w-fit">
+                                <DollarSign className="h-8 w-8 text-primary" />
+                            </div>
+                            <CardTitle className="font-headline pt-4">💸 O Lucro</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground">Cada aparelho = centenas de reais a mais no seu bolso.</p>
                         </CardContent>
                     </Card>
                 </div>
