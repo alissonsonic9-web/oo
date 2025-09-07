@@ -30,7 +30,7 @@ export default function ProblemSolution() {
                             <CardTitle className="font-headline pt-4">✅ A Solução</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <p className="text-muted-foreground">Existe uma oportunidade pouco conhecida, onde quem domina essas técnicas transforma desbloqueios em renda quase secreta. Poucos sabem, mas quem aprende, fatura alto.</p>
+                            <p className="text-muted-foreground">Existe uma oportunidade ainda desconhecida: quem domina essas técnicas transforma desbloqueios em renda secreta e fatura muito.</p>
                         </CardContent>
                     </Card>
                     <Card className="text-center shadow-lg border-primary/50">
