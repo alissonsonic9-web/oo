@@ -1,8 +1,8 @@
 import { Card } from '@/components/ui/card';
 
 const modules = [
-    { number: "01", title: "Módulo 01 – Introdução, conceitos de desbloqueio e como faturar já no primeiro mês.", description: "Aprenda os fundamentos e comece a lucrar rapidamente." },
-    { number: "02", title: "Módulo 02 – Passo a passo para desbloquear iPhones (incluindo modelos mais recentes).", description: "Técnicas específicas para todos os modelos de iPhone." },
+    { number: "01", title: "Módulo 01 – Introdução, conceitos de desbloqueio e como faturar já na primeira semana.", description: "Aprenda os fundamentos e comece a lucrar rapidamente." },
+    { number: "02", title: "Módulo 02 – Passo a passo para desbloquear iPhones, Xiaomi, Samsung (incluindo modelos mais recentes).", description: "Técnicas específicas para todos os modelos de iPhone." },
     { number: "03", title: "Módulo 03 – Apresentação de softwares, ferramentas e servidores profissionais.", description: "Conheça as melhores ferramentas do mercado." },
     { number: "04", title: "Módulo 04 – Aulas práticas com suporte completo.", description: "Prática supervisionada com acompanhamento individual." },
 ];
