@@ -17,7 +17,6 @@ export default function Guarantee() {
                             </svg>
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-48 h-48 md:w-56 md:h-56 bg-primary rounded-full flex items-center justify-center">
-                                    <span className="text-7xl md:text-8xl font-bold text-primary-foreground font-headline">07</span>
                                 </div>
                             </div>
                         </div>
