@@ -10,7 +10,6 @@ import Testimonials from '@/app/sections/Testimonials';
 import Marquee from '@/app/sections/Marquee';
 import Guarantee from '@/app/sections/Guarantee';
 import Faq from '@/app/sections/Faq';
-import BonusGenerator from '@/app/sections/BonusGenerator';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
         <Marquee />
         <Guarantee />
         <Faq />
-        <BonusGenerator />
       </main>
       <Footer />
     </div>
