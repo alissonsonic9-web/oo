@@ -41,7 +41,7 @@ export default function Pricing() {
                         </CardContent>
                         <CardFooter>
                             <Button asChild className="w-full" variant="outline">
-                                <Link href="#">ESCOLHER ESTE PLANO</Link>
+                                <Link href="https://www.ggcheckout.com/checkout/v2/0R8oLC8xdLyK6h2NfxAb">ESCOLHER ESTE PLANO</Link>
                             </Button>
                         </CardFooter>
                     </Card>
