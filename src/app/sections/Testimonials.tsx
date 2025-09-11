@@ -36,11 +36,24 @@ export default function Testimonials() {
             </p>
           </div>
         </div>
+
+        <div className="w-full max-w-4xl mx-auto pt-12">
+            <div className="aspect-video overflow-hidden rounded-xl border-4 border-primary shadow-2xl">
+                <video
+                    src="https://www.dropbox.com/scl/fi/rec5sgbstyyivnmdtuaop/V-deo-sem-t-tulo-Feito-com-o-Clipchamp-1.mp4?rlkey=6djm1xi0wnfxgdhvt549g7aii&st=bpgao74r&raw=1"
+                    controls
+                    className="w-full h-full object-cover"
+                >
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+        
         <Carousel
           opts={{
             align: "start",
           }}
-          className="w-full max-w-5xl mx-auto pt-12"
+          className="w-full max-w-5xl mx-auto pt-16"
         >
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
