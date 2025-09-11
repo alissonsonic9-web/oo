@@ -113,40 +113,6 @@ export default function Testimonials() {
             </div>
         </div>
         
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className="w-full max-w-5xl mx-auto pt-16"
-        >
-          <CarouselContent>
-            {testimonials.slice(0, 1).map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="flex flex-col h-full shadow-lg">
-                    <CardContent className="p-6 flex-1">
-                      <p className="italic text-muted-foreground">"{testimonial.quote}"</p>
-                    </CardContent>
-                    <CardFooter className="p-6 bg-background">
-                        <div className="flex items-center gap-4">
-                            <Avatar>
-                                <AvatarImage src={`https://i.pravatar.cc/40?u=${testimonial.name}`} />
-                                <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                            </Avatar>
-                            <div>
-                                <p className="font-semibold">{testimonial.name}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                            </div>
-                        </div>
-                    </CardFooter>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden sm:inline-flex" />
-          <CarouselNext className="hidden sm:inline-flex" />
-        </Carousel>
         <div className="text-center mt-8">
             <p className="font-bold text-lg text-primary">+1.127 alunos já aprovam</p>
             <p className="text-muted-foreground">Junte-se à comunidade que mais cresce no Brasil</p>
