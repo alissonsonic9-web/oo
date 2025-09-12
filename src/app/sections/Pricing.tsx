@@ -26,7 +26,7 @@ export default function Pricing() {
                 <div className="mx-auto grid max-w-sm gap-8 pt-12 lg:max-w-4xl lg:grid-cols-2 items-start">
                     <Card className="flex flex-col shadow-md">
                         <CardHeader className="pb-4">
-                            <CardTitle className="font-headline text-primary">🟠 Pacote Completo</CardTitle>
+                            <CardTitle className="font-headline text-primary">🟠 Pacote Básico</CardTitle>
                             <div className="flex items-baseline gap-2">
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$19,90</span>
                             </div>
