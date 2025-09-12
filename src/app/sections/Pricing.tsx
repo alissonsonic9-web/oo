@@ -12,7 +12,7 @@ export default function Pricing() {
         "Mentoria exclusiva para faturar 10k",
         "Suporte individual via AnyDesk",
         "Grupo VIP + servidores premium",
-        "TODOS os 6 bônus inclusos (R$199,50)",
+        "TODOS os 6 bônus inclusos",
         "Garantia incondicional de 7 dias",
     ];
 
