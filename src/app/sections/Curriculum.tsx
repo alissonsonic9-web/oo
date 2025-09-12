@@ -1,5 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Gift } from 'lucide-react';
 
 const modules = [
     { 
@@ -46,6 +46,17 @@ const modules = [
             "Suporte individual para casos complexos"
         ]
     },
+    {
+        number: "🎁",
+        title: "Área de Membros e Bônus Exclusivos",
+        description: "Acesso a uma área exclusiva onde você encontrará todos os bônus e materiais extras.",
+        topics: [
+            "Acesso vitalício à área de membros",
+            "Download de ferramentas e arquivos",
+            "Acesso a todos os 6 bônus especiais",
+            "Atualizações e novos conteúdos"
+        ]
+    }
 ];
 
 export default function Curriculum() {
@@ -67,10 +78,10 @@ export default function Curriculum() {
               <AccordionItem key={module.number} value={`item-${module.number}`} className="border-b-0 rounded-lg bg-card shadow-md data-[state=open]:shadow-xl transition-shadow">
                 <AccordionTrigger className="flex items-center gap-4 p-6 text-left hover:no-underline">
                   <div className="flex h-16 w-16 items-center justify-center rounded-md bg-primary text-primary-foreground font-bold text-3xl font-headline flex-shrink-0">
-                      {module.number}
+                      {module.number === '🎁' ? <Gift size={32} /> : module.number}
                   </div>
                   <div className="grid gap-1 flex-1">
-                      <h3 className="text-xl font-bold font-headline text-primary">{`Módulo ${module.number} - ${module.title}`}</h3>
+                      <h3 className="text-xl font-bold font-headline text-primary">{module.number !== '🎁' ? `Módulo ${module.number} - ${module.title}` : module.title}</h3>
                       <p className="text-muted-foreground text-sm">{module.description}</p>
                   </div>
                 </AccordionTrigger>
