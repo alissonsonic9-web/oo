@@ -64,7 +64,7 @@ export default function Pricing() {
                                     <li key={i} className="flex items-center gap-2 font-medium"><Check className="h-4 w-4 text-primary" /> {feature}</li>
                                 ))}
                             </ul>
-                            <p className="mt-4 text-center text-sm font-semibold text-accent">⚡ +2.900 alunos aprovam este plano!</p>
+                            <p className="mt-4 text-center text-sm font-semibold text-accent">⚡ +2.300 alunos aprovam este plano!</p>
                         </CardContent>
                         <CardFooter>
                             <Button asChild className="w-full font-bold" size="lg">
