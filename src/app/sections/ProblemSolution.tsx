@@ -31,7 +31,7 @@ export default function ProblemSolution() {
                         <h2 className="text-3xl font-bold tracking-tighter font-headline sm:text-5xl">Por que você está perdendo dinheiro?</h2>
                     </div>
                     <div className="w-full max-w-5xl">
-                        <div className="grid grid-cols-1 md:grid-cols-3 rounded-xl bg-card shadow-lg p-8 gap-8 md:gap-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 rounded-xl bg-card shadow-lg p-8 gap-8 md:gap-4 border-2 border-destructive">
                             {items.map((item, index) => (
                                 <div key={index} className="flex flex-col items-center text-center relative">
                                     <div className={`mb-4 rounded-full p-3 bg-secondary`}>
