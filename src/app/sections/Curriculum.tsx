@@ -1,10 +1,51 @@
-import { Card } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { CheckCircle } from 'lucide-react';
 
 const modules = [
-    { number: "01", title: "Módulo 01 – Introdução, conceitos de desbloqueio e como faturar já na primeira semana.", description: "Aprenda os fundamentos e comece a lucrar rapidamente." },
-    { number: "02", title: "Módulo 02 – Passo a passo para desbloquear iPhones, Xiaomi, Samsung (incluindo modelos mais recentes).", description: "Técnicas específicas para todos os modelos de iPhone." },
-    { number: "03", title: "Módulo 03 – Apresentação de softwares, ferramentas e servidores profissionais.", description: "Conheça as melhores ferramentas do mercado." },
-    { number: "04", title: "Módulo 04 – Aulas práticas com suporte completo.", description: "Prática supervisionada com acompanhamento individual." },
+    { 
+        number: "01", 
+        title: "Introdução e Faturamento Rápido", 
+        description: "Aprenda os conceitos de desbloqueio e como faturar já na primeira semana.",
+        topics: [
+            "Introdução ao mundo dos desbloqueios",
+            "Panorama do mercado e oportunidades",
+            "Ferramentas básicas necessárias",
+            "Como precificar seus serviços"
+        ]
+    },
+    { 
+        number: "02", 
+        title: "Desbloqueio Passo a Passo", 
+        description: "Passo a passo para desbloquear iPhones, Xiaomi, Samsung (incluindo modelos mais recentes).",
+        topics: [
+            "Técnicas para iPhone (todos os modelos)",
+            "Métodos para aparelhos Xiaomi",
+            "Soluções para dispositivos Samsung",
+            "Lidando com as atualizações mais recentes"
+        ]
+    },
+    { 
+        number: "03", 
+        title: "Ferramentas Profissionais", 
+        description: "Apresentação de softwares, ferramentas e servidores profissionais.",
+        topics: [
+            "Conhecendo os principais softwares",
+            "Acesso a servidores exclusivos",
+            "Uso de ferramentas de hardware",
+            "Otimizando seu setup de trabalho"
+        ]
+    },
+    { 
+        number: "04", 
+        title: "Aulas Práticas com Suporte", 
+        description: "Aulas práticas com suporte completo.",
+        topics: [
+            "Desbloqueios ao vivo com supervisão",
+            "Resolução de problemas comuns",
+            "Sessões de tira-dúvidas",
+            "Suporte individual para casos complexos"
+        ]
+    },
 ];
 
 export default function Curriculum() {
@@ -20,18 +61,34 @@ export default function Curriculum() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-6xl gap-6 py-12 lg:grid-cols-2">
-          {modules.map((module) => (
-            <Card key={module.number} className="flex flex-col sm:flex-row items-start gap-6 p-6 shadow-md hover:shadow-xl transition-shadow">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-3xl font-headline flex-shrink-0">
-                    {module.number}
-                </div>
-                <div className="grid gap-1">
-                    <h3 className="text-xl font-bold font-headline">{module.title}</h3>
-                    <p className="text-muted-foreground">{module.description}</p>
-                </div>
-            </Card>
-          ))}
+        <div className="mx-auto max-w-3xl pt-12">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {modules.map((module) => (
+              <AccordionItem key={module.number} value={`item-${module.number}`} className="border-b-0 rounded-lg bg-card shadow-md data-[state=open]:shadow-xl transition-shadow">
+                <AccordionTrigger className="flex items-center gap-4 p-6 text-left hover:no-underline">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-md bg-primary text-primary-foreground font-bold text-3xl font-headline flex-shrink-0">
+                      {module.number}
+                  </div>
+                  <div className="grid gap-1 flex-1">
+                      <h3 className="text-xl font-bold font-headline text-primary">{`Módulo ${module.number} - ${module.title}`}</h3>
+                      <p className="text-muted-foreground text-sm">{module.description}</p>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="p-6 pt-0">
+                  <div className="border-l-2 border-primary ml-8 pl-8">
+                    <ul className="space-y-3">
+                      {module.topics.map((topic, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                            <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                            <span className="text-muted-foreground">{topic}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>
