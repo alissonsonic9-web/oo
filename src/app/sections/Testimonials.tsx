@@ -114,7 +114,7 @@ export default function Testimonials() {
         </div>
         
         <div className="text-center mt-8">
-            <p className="font-bold text-lg text-primary">+1.127 alunos já aprovam</p>
+            <p className="font-bold text-lg text-primary">+2.900 alunos já aprovam</p>
             <p className="text-muted-foreground">Junte-se à comunidade que mais cresce no Brasil</p>
         </div>
       </div>
