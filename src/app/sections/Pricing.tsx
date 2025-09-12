@@ -8,6 +8,7 @@ export default function Pricing() {
         "Acesso vitalício completo",
         "Curso iPhone, Xiaomi e Samsung",
         "Desbloqueios de notebooks",
+        "Curso de MDM completo",
         "Mentoria exclusiva para faturar 10k",
         "Suporte individual via AnyDesk",
         "Grupo VIP + servidores premium",
