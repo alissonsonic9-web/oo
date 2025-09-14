@@ -6,7 +6,7 @@ export default function ProblemSolution() {
         {
             icon: XCircle,
             title: "O Problema",
-            description: "Terceirizar desbloqueios = perder até 90% do lucro que poderia ser seu.",
+            description: "Cada dia que você não sabe desbloquear, você está deixando dinheiro na mão de outros.",
             iconColor: "text-destructive"
         },
         {
