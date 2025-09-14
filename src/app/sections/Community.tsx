@@ -134,7 +134,7 @@ export default function Community() {
                             height={400}
                             alt="Depoimento de aluno"
                             data-ai-hint="testimonial screenshot"
-                            className="rounded-xl shadow-2xl object-cover max-h-[400px] w-auto border-4 border-secondary hidden md:block"
+                            className="rounded-xl shadow-2xl object-cover max-h-[400px] w-auto border-4 border-secondary md:block"
                         />
                     </div>
                 </div>
