@@ -142,6 +142,16 @@ export default function Community() {
                                     className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
                                 />
                             </CarouselItem>
+                             <CarouselItem className="basis-10/12 md:basis-11/12">
+                                <Image 
+                                    src="https://i.postimg.cc/HjGhK5Cx/Design-sem-nome-1.png"
+                                    width={400}
+                                    height={600}
+                                    alt="Depoimento de aluno 2"
+                                    data-ai-hint="testimonial screenshot"
+                                    className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
+                                />
+                            </CarouselItem>
                         </CarouselContent>
                         <CarouselPrevious />
                         <CarouselNext />
