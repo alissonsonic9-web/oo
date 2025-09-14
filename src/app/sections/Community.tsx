@@ -9,12 +9,12 @@ const barChartData = [
     { month: 'FEV', members: 850, fill: "hsl(var(--chart-2))" },
     { month: 'MAR', members: 900, fill: "hsl(var(--chart-1))" },
     { month: 'ABR', members: 950, fill: "hsl(var(--chart-5))" },
-    { month: 'HOJE', members: 1000, fill: "hsl(var(--destructive))" },
+    { month: 'HOJE', members: 1000, fill: "hsl(var(--primary))" },
 ];
 
-const satisfactionData = [{ name: 'Satisfação', value: 95, fill: 'hsl(var(--destructive))' }];
+const satisfactionData = [{ name: 'Satisfação', value: 95, fill: 'hsl(var(--primary))' }];
 const retentionData = [{ name: 'Retenção', value: 87, fill: 'hsl(var(--chart-4))' }];
-const supportData = [{ name: 'Suporte', value: 100, fill: 'hsl(var(--destructive))' }];
+const supportData = [{ name: 'Suporte', value: 100, fill: 'hsl(var(--primary))' }];
 
 const stats = [
     { icon: Users, value: "+3.700", label: "Membros Ativos", sublabel: "+15% este mês" },
@@ -24,7 +24,7 @@ const stats = [
 
 const RadialChartComponent = ({ data, label }: { data: {name: string, value: number, fill: string}[], label: string }) => (
     <div className="flex flex-col items-center justify-center">
-        <div className="relative h-32 w-32 sm:h-36 sm:w-36">
+        <div className="relative h-36 w-36 sm:h-40 sm:w-40">
             <ResponsiveContainer width="100%" height="100%">
                 <RadialBarChart
                     innerRadius="80%"
@@ -43,7 +43,7 @@ const RadialChartComponent = ({ data, label }: { data: {name: string, value: num
                 </RadialBarChart>
             </ResponsiveContainer>
             <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-2xl sm:text-3xl font-bold font-headline text-foreground">{data[0].value}%</span>
+                <span className="text-3xl sm:text-4xl font-bold font-headline text-foreground">{data[0].value}%</span>
             </div>
         </div>
         <p className="mt-2 text-sm font-semibold text-muted-foreground">{label}</p>
