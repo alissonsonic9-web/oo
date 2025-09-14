@@ -35,7 +35,7 @@ const RadialChartComponent = ({ data, label }: { data: {name: string, value: num
                 >
                     <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />
                     <RadialBar
-                        background={{ fill: 'hsla(var(--muted-foreground), 0.2)' }}
+                        background={false}
                         dataKey="value"
                         cornerRadius={30}
                         angleAxisId={0}
@@ -84,7 +84,7 @@ export default function Community() {
                             <h3 className="text-lg font-bold font-headline mb-4 text-left">Crescimento de Membros</h3>
                             <div className="h-48">
                                 <ResponsiveContainer width="100%" height="100%">
-                                    <RechartsBarChart data={barChartData} margin={{ top: 20, right: 0, left: 0, bottom: 5 }}>
+                                    <RechartsBarChart data={barChartData} margin={{ top: 20, right: 0, left: 0, bottom: 5 }} barGap={10} barCategoryGap="20%">
                                         <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
                                         <YAxis
                                             stroke="hsl(var(--muted-foreground))"
