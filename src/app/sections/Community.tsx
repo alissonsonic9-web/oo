@@ -3,6 +3,7 @@ import { Users, BarChart, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ResponsiveContainer, BarChart as RechartsBarChart, Bar, XAxis, YAxis, Tooltip, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 import Image from 'next/image';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 
 const barChartData = [
     { month: 'MAIO', members: 750, fill: "hsl(var(--chart-4))" },
@@ -35,7 +36,7 @@ const RadialChartComponent = ({ data, label }: { data: {name: string, value: num
                 >
                     <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />
                     <RadialBar
-                        background={{ fill: 'hsla(var(--muted), 0.5)'}}
+                        background
                         dataKey="value"
                         cornerRadius={30}
                         angleAxisId={0}
@@ -65,7 +66,7 @@ export default function Community() {
                         {/* Stats Cards */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             {stats.map((stat, index) => (
-                                <Card key={index} className="bg-card/90 backdrop-blur-sm border-border/50 text-center shadow-lg">
+                                <Card key={index} className="bg-card/95 backdrop-blur-sm border-border/50 text-center shadow-lg">
                                     <CardHeader className="pb-2">
                                         <CardTitle className="flex flex-col items-center gap-1 text-base font-medium text-muted-foreground">
                                             {stat.label}
@@ -80,7 +81,7 @@ export default function Community() {
                         </div>
                         
                         {/* Bar Chart */}
-                        <Card className="bg-card/90 backdrop-blur-sm border-border/50 shadow-lg p-4">
+                        <Card className="bg-card/95 backdrop-blur-sm border-border/50 shadow-lg p-4">
                             <h3 className="text-lg font-bold font-headline mb-4 text-left">Crescimento de Membros</h3>
                             <div className="h-48">
                                 <ResponsiveContainer width="100%" height="100%">
@@ -119,24 +120,30 @@ export default function Community() {
                     </div>
                     
                     {/* Community Images */}
-                    <div className="flex items-center justify-center gap-4">
-                        <Image 
-                            src="https://i.postimg.cc/d05LnVmg/316058478-870152138-expert-02-1.jpg"
-                            width={350}
-                            height={550}
-                            alt="Comunidade Destrava Tech"
-                            data-ai-hint="community chat screenshot"
-                            className="rounded-xl shadow-2xl object-cover max-h-[550px] w-auto border-4 border-primary"
-                        />
-                        <Image 
-                            src="https://i.postimg.cc/L6f5GpMQ/testimonial-3-2-1.png"
-                            width={200}
-                            height={400}
-                            alt="Depoimento de aluno"
-                            data-ai-hint="testimonial screenshot"
-                            className="rounded-xl shadow-2xl object-cover max-h-[400px] w-auto border-4 border-secondary md:block"
-                        />
-                    </div>
+                     <Carousel opts={{ loop: true }} className="w-full max-w-md mx-auto">
+                        <CarouselContent>
+                            <CarouselItem>
+                                <Image 
+                                    src="https://i.postimg.cc/d05LnVmg/316058478-870152138-expert-02-1.jpg"
+                                    width={400}
+                                    height={600}
+                                    alt="Comunidade Destrava Tech"
+                                    data-ai-hint="community chat screenshot"
+                                    className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
+                                />
+                            </CarouselItem>
+                            <CarouselItem>
+                                <Image 
+                                    src="https://i.postimg.cc/L6f5GpMQ/testimonial-3-2-1.png"
+                                    width={400}
+                                    height={600}
+                                    alt="Depoimento de aluno"
+                                    data-ai-hint="testimonial screenshot"
+                                    className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
+                                />
+                            </CarouselItem>
+                        </CarouselContent>
+                    </Carousel>
                 </div>
             </div>
         </section>
