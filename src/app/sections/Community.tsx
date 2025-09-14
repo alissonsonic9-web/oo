@@ -35,7 +35,7 @@ const RadialChartComponent = ({ data, label }: { data: {name: string, value: num
                 >
                     <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />
                     <RadialBar
-                        background={false}
+                        background={{ fill: 'hsla(var(--muted), 0.5)'}}
                         dataKey="value"
                         cornerRadius={30}
                         angleAxisId={0}
@@ -53,7 +53,7 @@ const RadialChartComponent = ({ data, label }: { data: {name: string, value: num
 
 export default function Community() {
     return (
-        <section id="community" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <section id="community" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/80">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center text-center space-y-2 mb-12">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Painel da Comunidade</h2>
@@ -65,7 +65,7 @@ export default function Community() {
                         {/* Stats Cards */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             {stats.map((stat, index) => (
-                                <Card key={index} className="bg-card/80 backdrop-blur-sm border-border/50 text-center shadow-lg">
+                                <Card key={index} className="bg-card/90 backdrop-blur-sm border-border/50 text-center shadow-lg">
                                     <CardHeader className="pb-2">
                                         <CardTitle className="flex flex-col items-center gap-1 text-base font-medium text-muted-foreground">
                                             {stat.label}
@@ -80,11 +80,11 @@ export default function Community() {
                         </div>
                         
                         {/* Bar Chart */}
-                        <Card className="bg-card/80 backdrop-blur-sm border-border/50 shadow-lg p-4">
+                        <Card className="bg-card/90 backdrop-blur-sm border-border/50 shadow-lg p-4">
                             <h3 className="text-lg font-bold font-headline mb-4 text-left">Crescimento de Membros</h3>
                             <div className="h-48">
                                 <ResponsiveContainer width="100%" height="100%">
-                                    <RechartsBarChart data={barChartData} margin={{ top: 20, right: 0, left: 0, bottom: 5 }} barGap={10} barCategoryGap="20%">
+                                    <RechartsBarChart data={barChartData} margin={{ top: 20, right: 0, left: -20, bottom: 5 }} barGap={12} barCategoryGap="20%">
                                         <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
                                         <YAxis
                                             stroke="hsl(var(--muted-foreground))"
@@ -93,7 +93,6 @@ export default function Community() {
                                             axisLine={false}
                                             tickFormatter={(value) => `${value}+`}
                                             domain={[0, 'dataMax + 100']}
-                                            hide
                                         />
                                         <Tooltip
                                             contentStyle={{
@@ -119,15 +118,23 @@ export default function Community() {
 
                     </div>
                     
-                    {/* Community Image */}
-                    <div className="flex items-center justify-center">
+                    {/* Community Images */}
+                    <div className="flex items-center justify-center gap-4">
                         <Image 
                             src="https://i.postimg.cc/d05LnVmg/316058478-870152138-expert-02-1.jpg"
-                            width={500}
-                            height={750}
+                            width={350}
+                            height={550}
                             alt="Comunidade Destrava Tech"
                             data-ai-hint="community chat screenshot"
-                            className="rounded-xl shadow-2xl object-cover max-h-[600px] w-auto border-4 border-primary"
+                            className="rounded-xl shadow-2xl object-cover max-h-[550px] w-auto border-4 border-primary"
+                        />
+                        <Image 
+                            src="https://i.postimg.cc/L6f5GpMQ/testimonial-3-2-1.png"
+                            width={200}
+                            height={400}
+                            alt="Depoimento de aluno"
+                            data-ai-hint="testimonial screenshot"
+                            className="rounded-xl shadow-2xl object-cover max-h-[400px] w-auto border-4 border-secondary hidden md:block"
                         />
                     </div>
                 </div>
