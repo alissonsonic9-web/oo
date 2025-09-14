@@ -5,10 +5,10 @@ import { ResponsiveContainer, BarChart as RechartsBarChart, Bar, XAxis, YAxis, T
 import Image from 'next/image';
 
 const barChartData = [
-    { month: 'JAN', members: 750, fill: "hsl(var(--chart-4))" },
-    { month: 'FEV', members: 850, fill: "hsl(var(--chart-2))" },
-    { month: 'MAR', members: 900, fill: "hsl(var(--chart-1))" },
-    { month: 'ABR', members: 950, fill: "hsl(var(--chart-5))" },
+    { month: 'MAIO', members: 750, fill: "hsl(var(--chart-4))" },
+    { month: 'JUNHO', members: 850, fill: "hsl(var(--chart-2))" },
+    { month: 'JULHO', members: 900, fill: "hsl(var(--chart-1))" },
+    { month: 'AGOSTO', members: 950, fill: "hsl(var(--chart-5))" },
     { month: 'HOJE', members: 1000, fill: "hsl(var(--primary))" },
 ];
 
