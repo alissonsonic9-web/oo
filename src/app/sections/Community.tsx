@@ -3,7 +3,7 @@ import { Users, BarChart, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ResponsiveContainer, BarChart as RechartsBarChart, Bar, XAxis, YAxis, Tooltip, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 import Image from 'next/image';
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const barChartData = [
     { month: 'MAIO', members: 750, fill: "hsl(var(--chart-4))" },
@@ -36,7 +36,7 @@ const RadialChartComponent = ({ data, label }: { data: {name: string, value: num
                 >
                     <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />
                     <RadialBar
-                        background
+                        background={{ fill: 'hsla(var(--muted-foreground), 0.1)' }}
                         dataKey="value"
                         cornerRadius={30}
                         angleAxisId={0}
@@ -120,9 +120,9 @@ export default function Community() {
                     </div>
                     
                     {/* Community Images */}
-                     <Carousel opts={{ loop: true }} className="w-full max-w-md mx-auto">
+                     <Carousel opts={{ loop: true, align: "start" }} className="w-full max-w-md mx-auto">
                         <CarouselContent>
-                            <CarouselItem>
+                            <CarouselItem className="basis-10/12 md:basis-11/12">
                                 <Image 
                                     src="https://i.postimg.cc/d05LnVmg/316058478-870152138-expert-02-1.jpg"
                                     width={400}
@@ -132,7 +132,7 @@ export default function Community() {
                                     className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
                                 />
                             </CarouselItem>
-                            <CarouselItem>
+                            <CarouselItem className="basis-10/12 md:basis-11/12">
                                 <Image 
                                     src="https://i.postimg.cc/L6f5GpMQ/testimonial-3-2-1.png"
                                     width={400}
@@ -143,6 +143,8 @@ export default function Community() {
                                 />
                             </CarouselItem>
                         </CarouselContent>
+                        <CarouselPrevious />
+                        <CarouselNext />
                     </Carousel>
                 </div>
             </div>
