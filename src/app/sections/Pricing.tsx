@@ -68,7 +68,7 @@ export default function Pricing() {
                         </CardContent>
                         <CardFooter>
                             <Button asChild className="w-full font-bold" size="lg">
-                                <Link href="#">GARANTIR MEU PREMIUM AGORA</Link>
+                                <Link href="https://www.ggcheckout.com/checkout/v2/IZRreLxMCeUfT55SoTRG">GARANTIR MEU PREMIUM AGORA</Link>
                             </Button>
                         </CardFooter>
                     </Card>
