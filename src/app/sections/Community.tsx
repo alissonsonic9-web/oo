@@ -29,7 +29,7 @@ export default function Community() {
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <div className="flex flex-col gap-8">
                         {/* Stats Cards */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -49,49 +49,27 @@ export default function Community() {
                             ))}
                         </div>
 
-                        {/* Growth Chart */}
-                        <Card className="bg-card/80 backdrop-blur-sm border-border/50">
-                            <CardHeader>
-                                <CardTitle>Crescimento de Membros</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <ResponsiveContainer width="100%" height={200}>
-                                    <RechartsBarChart data={chartData} margin={{ top: 5, right: 20, left: -10, bottom: 5 }}>
-                                        <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
-                                        <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value}`} />
-                                        <Bar dataKey="members" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
-                                    </RechartsBarChart>
-                                </ResponsiveContainer>
-                            </CardContent>
-                        </Card>
-
-                        {/* Satisfaction Metrics */}
-                        <div className="grid grid-cols-3 gap-6">
-                             <Card className="bg-card/80 backdrop-blur-sm border-border/50 text-center">
-                                <CardHeader className="p-4">
-                                     <CardTitle className="text-sm font-medium text-muted-foreground">Satisfação</CardTitle>
-                                 </CardHeader>
-                                 <CardContent className="p-4 pt-0">
+                         <div className="text-left space-y-4">
+                            <h3 className="text-2xl font-bold font-headline text-primary">Nossa Comunidade Não Para de Crescer</h3>
+                            <p className="text-muted-foreground">
+                                Somos mais de 3.700 membros ativos, com um faturamento médio que ultrapassa os R$10.000,00 e um suporte dedicado que garante 99% de satisfação. O crescimento é constante e os resultados são reais.
+                            </p>
+                            <div className="grid grid-cols-3 gap-4 text-center">
+                                 <div className="p-4 bg-card rounded-lg">
                                      <div className="text-3xl font-bold font-headline">99%</div>
-                                 </CardContent>
-                             </Card>
-                             <Card className="bg-card/80 backdrop-blur-sm border-border/50 text-center">
-                                 <CardHeader className="p-4">
-                                     <CardTitle className="text-sm font-medium text-muted-foreground">Retenção</CardTitle>
-                                 </CardHeader>
-                                 <CardContent className="p-4 pt-0">
+                                     <p className="text-sm font-medium text-muted-foreground">Satisfação</p>
+                                 </div>
+                                 <div className="p-4 bg-card rounded-lg">
                                      <div className="text-3xl font-bold font-headline">97%</div>
-                                 </CardContent>
-                             </Card>
-                             <Card className="bg-card/80 backdrop-blur-sm border-border/50 text-center">
-                                 <CardHeader className="p-4">
-                                     <CardTitle className="text-sm font-medium text-muted-foreground">Suporte</CardTitle>
-                                 </CardHeader>
-                                 <CardContent className="p-4 pt-0">
+                                     <p className="text-sm font-medium text-muted-foreground">Retenção</p>
+                                 </div>
+                                 <div className="p-4 bg-card rounded-lg">
                                      <div className="text-3xl font-bold font-headline">100%</div>
-                                 </CardContent>
-                             </Card>
+                                     <p className="text-sm font-medium text-muted-foreground">Suporte</p>
+                                 </div>
+                            </div>
                         </div>
+
                     </div>
                     
                     {/* Community Image */}
@@ -102,7 +80,7 @@ export default function Community() {
                             height={750}
                             alt="Comunidade Destrava Tech"
                             data-ai-hint="community chat screenshot"
-                            className="rounded-xl shadow-2xl object-cover"
+                            className="rounded-xl shadow-2xl object-cover max-h-[600px] w-auto"
                         />
                     </div>
                 </div>
