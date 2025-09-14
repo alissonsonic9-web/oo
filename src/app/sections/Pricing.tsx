@@ -28,7 +28,7 @@ export default function Pricing() {
                         <CardHeader className="pb-4">
                             <CardTitle className="font-headline text-primary">🟠 Pacote Básico</CardTitle>
                             <div className="flex items-baseline gap-2">
-                                <span className="text-4xl font-extrabold tracking-tight font-headline">R$19,90</span>
+                                <span className="text-4xl font-extrabold tracking-tight font-headline">R$17,90</span>
                             </div>
                         </CardHeader>
                         <CardContent className="flex-1">
