@@ -134,7 +134,7 @@ export default function Community() {
                             </CarouselItem>
                             <CarouselItem className="basis-10/12 md:basis-11/12">
                                 <Image 
-                                    src="https://i.postimg.cc/L6f5GpMQ/testimonial-3-2-1.png"
+                                    src="https://i.postimg.cc/Qt15mWSS/Design-sem-nome.png"
                                     width={400}
                                     height={600}
                                     alt="Depoimento de aluno"
