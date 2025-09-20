@@ -13,6 +13,7 @@ export default function Pricing() {
         "Suporte individual via AnyDesk",
         "Grupo VIP + servidores premium",
         "TODOS os 6 bônus inclusos",
+        "Desbloqueio PAYJOY",
         "Garantia incondicional de 7 dias",
     ];
 
