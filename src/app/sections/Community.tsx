@@ -57,7 +57,7 @@ export default function Community() {
         <section id="community" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/80">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center text-center space-y-2 mb-12">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Painel da Comunidade</h2>
+                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Conheça nossa Comunidade</h2>
                     <p className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">Atualizado em tempo real</p>
                 </div>
 
