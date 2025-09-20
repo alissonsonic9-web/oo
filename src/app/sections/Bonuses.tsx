@@ -19,7 +19,7 @@ export default function Bonuses() {
             <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">🎁 +6 Bônus Exclusivos</h2>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl">
-                    No plano premium, você ganha 6 bônus que valem mais que o próprio curso:
+                    No <span className="text-red-500 font-bold">plano premium</span>, você ganha 6 bônus que valem mais que o próprio curso:
                 </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl w-full">
