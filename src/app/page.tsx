@@ -20,9 +20,9 @@ export default function Home() {
         <Hero />
         <ProblemSolution />
         <Testimonials />
-        <Bonuses />
         <Curriculum />
         <Pricing />
+        <Bonuses />
         <Audience />
         <Community />
         <Marquee />
