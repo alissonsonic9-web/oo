@@ -12,7 +12,7 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center space-y-6">
           <div className="space-y-4">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-white">
-              Descubra como transformar desbloqueios de celulares <span className="text-red-500">em uma renda de mais de R$10.000/mês</span>
+              Descubra como transformar desbloqueios de celulares <span className="text-primary">em uma renda de mais de R$10.000/mês</span>
             </h1>
             <p className="max-w-[700px] text-lg text-gray-200 md:text-xl">
               Está cansado de pagar caro para terceiros desbloquearem iPhone, Xiaomi ou Samsung? Aprenda você mesmo e transforme cada desbloqueio em lucro direto no seu bolso!
