@@ -88,10 +88,21 @@ export default {
             height: '0',
           },
         },
+        'pulse-glow': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+            boxShadow: '0 0 20px 0 hsl(var(--primary) / 0.5)',
+          },
+          '50%': {
+            transform: 'scale(1.02)',
+            boxShadow: '0 0 35px 5px hsl(var(--primary) / 0.6)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'pulse-glow': 'pulse-glow 2.5s infinite ease-in-out',
       },
     },
   },
