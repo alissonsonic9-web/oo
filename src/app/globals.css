@@ -39,15 +39,15 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 0 0% 17.3%; /* #2C2C2C */
+    --background: 0 0% 18.8%; /* #303030 */
     --foreground: 0 0% 98%; /* #FAFAFA */
-    --card: 0 0% 18.8%; /* #303030 */
+    --card: 0 0% 20.8%; /* #353535 */
     --card-foreground: 0 0% 98%; /* #FAFAFA */
-    --popover: 0 0% 17.3%; /* #2C2C2C */
+    --popover: 0 0% 18.8%; /* #303030 */
     --popover-foreground: 0 0% 98%; /* #FAFAFA */
     --primary: 0 69% 54%; /* #DE3535 for CTAs */
     --primary-foreground: 0 0% 100%; /* #FFFFFF for text on buttons */
-    --secondary: 0 0% 20.4%; /* #343434 */
+    --secondary: 0 0% 22.8%; /* #3A3A3A */
     --secondary-foreground: 0 0% 98%; /* #FAFAFA */
     --muted: 0 100% 15%;
     --muted-foreground: 220 5.9% 90%; /* #E5E7EB */
@@ -55,8 +55,8 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 69% 51%; /* #C72B2B for hover state */
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 25.1%; /* #404040 */
-    --input: 0 0% 25.1%; /* #404040 */
+    --border: 0 0% 29%; /* #4A4A4A */
+    --input: 0 0% 29%; /* #4A4A4A */
     --ring: 0 69% 54%; /* Ring color matches primary CTA */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
