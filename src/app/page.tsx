@@ -21,8 +21,8 @@ export default function Home() {
         <ProblemSolution />
         <Testimonials />
         <Pricing />
-        <Community />
         <Bonuses />
+        <Community />
         <Curriculum />
         <Audience />
         <Marquee />
