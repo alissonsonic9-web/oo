@@ -21,10 +21,10 @@ export default function Home() {
         <ProblemSolution />
         <Testimonials />
         <Pricing />
+        <Audience />
         <Bonuses />
         <Curriculum />
         <Community />
-        <Audience />
         <Marquee />
         <Guarantee />
         <Faq />
