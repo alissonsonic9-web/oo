@@ -22,8 +22,8 @@ export default function Home() {
         <Testimonials />
         <Pricing />
         <Bonuses />
-        <Community />
         <Curriculum />
+        <Community />
         <Audience />
         <Marquee />
         <Guarantee />
