@@ -19,11 +19,11 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <ProblemSolution />
+        <Pricing />
         <Community />
         <Bonuses />
         <Curriculum />
         <Audience />
-        <Pricing />
         <Testimonials />
         <Marquee />
         <Guarantee />
