@@ -83,7 +83,7 @@ export default function Testimonials() {
             <div className="relative aspect-video overflow-hidden rounded-xl border-4 border-primary shadow-2xl group">
                 <video
                     ref={videoRef}
-                    src="https://www.dropbox.com/scl/fi/rec5sgbstyyivnmdtuaop/V-deo-sem-t-tulo-Feito-com-o-Clipchamp-1.mp4?rlkey=6djm1xi0wnfxgdhvt549g7aii&st=bpgao74r&raw=1"
+                    src="https://www.dropbox.com/scl/fi/9qlokmmc8qpqmh0shlc4y/IMG_0522-1-Compressed-with-FlexClip.mp4?rlkey=69ycrvly5y2q3zf9opu0x6khv&st=ywt29ysq&raw=1"
                     className="w-full h-full object-cover"
                     onEnded={handleVideoEnd}
                     onPlay={onPlay}
