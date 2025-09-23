@@ -11,6 +11,7 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
+import AnimatedCounter from '@/components/AnimatedCounter';
 
 const barChartData = [
     { month: 'MAIO', members: 1600, fill: "hsl(var(--chart-4))" },
@@ -23,12 +24,6 @@ const barChartData = [
 const satisfactionData = [{ name: 'Satisfação', value: 95, fill: 'hsl(var(--primary))' }];
 const retentionData = [{ name: 'Retenção', value: 87, fill: 'hsl(var(--primary))' }];
 const supportData = [{ name: 'Suporte', value: 100, fill: 'hsl(var(--primary))' }];
-
-const stats = [
-    { icon: Users, value: "+3.700", label: "Membros Ativos", sublabel: "+15% este mês" },
-    { icon: BarChart, value: "R$10.000+", label: "Faturamento Médio", sublabel: "+23% este mês" },
-    { icon: Clock, value: "24/7", label: "Suporte", sublabel: "100% disponível" },
-];
 
 const communityImages = [
     placeholderImages['community-chat-screenshot'],
@@ -74,6 +69,18 @@ export default function Community() {
     const sectionRef = useRef<HTMLDivElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.2 });
 
+    const stats = [
+        { icon: Users, label: "Membros Ativos", sublabel: "+15% este mês",
+          value: <AnimatedCounter from={100} to={3700} isVisible={isVisible} prefix="+" /> 
+        },
+        { icon: BarChart, label: "Faturamento Médio", sublabel: "+23% este mês",
+          value: <AnimatedCounter from={2000} to={10000} isVisible={isVisible} prefix="R$" suffix="+" />
+        },
+        { icon: Clock, label: "Suporte", sublabel: "100% disponível",
+          value: <div className={cn("text-4xl font-extrabold font-headline transition-opacity duration-500", isVisible ? 'opacity-100' : 'opacity-0')}>24/7</div>
+        },
+    ];
+
     return (
         <section id="community" ref={sectionRef} className={cn("w-full py-12 md:py-24 lg:py-32 bg-secondary/80 transition-opacity duration-1000 ease-in", isVisible ? 'opacity-100' : 'opacity-0')}>
             <div className="container px-4 md:px-6">
@@ -94,7 +101,9 @@ export default function Community() {
                                         </CardTitle>
                                     </CardHeader>
                                     <CardContent className="flex flex-col items-center gap-1">
-                                        <div className="text-4xl font-extrabold font-headline">{stat.value}</div>
+                                        <div className="text-4xl font-extrabold font-headline h-12 flex items-center justify-center">
+                                            {stat.value}
+                                        </div>
                                         <p className="text-xs text-primary font-semibold">{stat.sublabel}</p>
                                     </CardContent>
                                 </Card>
