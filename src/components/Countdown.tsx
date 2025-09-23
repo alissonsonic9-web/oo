@@ -19,7 +19,7 @@ export default function Countdown() {
     const seconds = timeLeft % 60;
 
     return (
-        <div className="bg-primary text-primary-foreground text-center py-2 sticky top-0 z-50 font-bold">
+        <div className="bg-primary text-primary-foreground text-center py-2 sticky top-0 z-50 font-bold animate-pulse-glow">
             <span>A oferta termina em </span>
             <span className="font-mono">{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span>
         </div>
