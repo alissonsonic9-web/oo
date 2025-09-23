@@ -47,7 +47,7 @@ export default function Pricing() {
                         </CardFooter>
                     </Card>
 
-                    <Card className="relative flex flex-col border-2 border-accent shadow-2xl animate-subtle-pulse">
+                    <Card className="relative flex flex-col border-2 border-accent shadow-2xl">
                         <div className="absolute -top-4 right-4 rounded-full bg-accent px-4 py-1.5 text-sm font-bold text-accent-foreground flex items-center gap-1">
                             <Star className="h-4 w-4" /> MAIS ESCOLHIDO
                         </div>
