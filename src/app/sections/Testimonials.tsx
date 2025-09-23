@@ -5,27 +5,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useState, useRef } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
 
-const testimonials = [
-  {
-    quote: "Em 2 semanas já faturei R$2.000. O curso é completo e o suporte é incrível!",
-    name: "João Silva",
-    title: "Técnico em Eletrônicos",
-    avatar: "JS"
-  },
-  {
-    quote: "Deixei de pagar terceiros e agora lucro R$500 por iPhone desbloqueado. Valeu cada centavo!",
-    name: "Maria Santos",
-    title: "Empreendedora",
-    avatar: "MS"
-  },
-  {
-    quote: "Multipliquei meus ganhos por 3. Agora ofereço desbloqueio como serviço premium.",
-    name: "Carlos Oliveira",
-    title: "Assistência Técnica",
-    avatar: "CO"
-  },
-];
-
 export default function Testimonials() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
