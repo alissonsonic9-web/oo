@@ -125,6 +125,14 @@ export default {
             transform: 'translateY(-100%)',
           },
         },
+        'subtle-pulse': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+          },
+          '50%': {
+            transform: 'scale(1.025)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -134,6 +142,7 @@ export default {
         'fade-out-down': 'fade-out-down 0.5s ease-in forwards',
         'tilt': 'tilt 10s infinite linear',
         'particles': 'particles 20s linear infinite',
+        'subtle-pulse': 'subtle-pulse 2s infinite ease-in-out',
       },
     },
   },
