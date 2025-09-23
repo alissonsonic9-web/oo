@@ -43,7 +43,6 @@ export default function Audience() {
                             data-ai-hint={placeholderImages['audience-person-using-phone'].hint}
                             className="mx-auto rounded-xl object-cover shadow-lg h-full w-full"
                         />
-                         <div className="absolute inset-0 bg-transparent particles-overlay"></div>
                     </div>
                 </div>
             </div>
