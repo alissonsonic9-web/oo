@@ -19,11 +19,13 @@ const purchases = [
 export default function SocialProof() {
     const [currentPurchase, setCurrentPurchase] = useState<{ name: string; location: string } | null>(null);
     const [isVisible, setIsVisible] = useState(false);
+    const [purchaseCount, setPurchaseCount] = useState(0);
 
     useEffect(() => {
         const showRandomPurchase = () => {
             const randomIndex = Math.floor(Math.random() * purchases.length);
             setCurrentPurchase(purchases[randomIndex]);
+            setPurchaseCount((prevCount) => prevCount + 1);
             setIsVisible(true);
 
             setTimeout(() => {
@@ -35,7 +37,7 @@ export default function SocialProof() {
         const initialTimeout = setTimeout(showRandomPurchase, 3000);
 
         // Define o intervalo para mostrar as próximas notificações
-        const interval = setInterval(showRandomPurchase, 10000); // A cada 10 segundos
+        const interval = setInterval(showRandomPurchase, 20000); // A cada 20 segundos
 
         return () => {
             clearTimeout(initialTimeout);
@@ -46,6 +48,8 @@ export default function SocialProof() {
     if (!currentPurchase) {
         return null;
     }
+
+    const plan = purchaseCount % 8 === 0 ? "Plano Básico" : "Plano Premium";
 
     return (
         <div 
@@ -62,7 +66,7 @@ export default function SocialProof() {
                         {currentPurchase.name} de {currentPurchase.location}
                     </p>
                     <p className="text-sm text-muted-foreground">
-                        Acabou de adquirir o <span className="font-bold text-primary">Plano Premium</span>
+                        Acabou de adquirir o <span className={`font-bold ${plan === "Plano Básico" ? "text-foreground" : "text-primary"}`}>{plan}</span>
                     </p>
                     <p className="text-xs text-muted-foreground/80 mt-1">
                         Há poucos segundos
