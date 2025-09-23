@@ -1,6 +1,11 @@
+"use client";
+
 import { CheckCircle2 } from 'lucide-react';
 import Image from "next/image";
 import placeholderImages from '@/lib/placeholder-images.json';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { useRef } from 'react';
+import { cn } from '@/lib/utils';
 
 const audienceList = [
     "Técnicos de manutenção de celulares",
@@ -10,11 +15,14 @@ const audienceList = [
 ];
 
 export default function Audience() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.1 });
+
     return (
-        <section id="audience" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/50">
+        <section id="audience" ref={sectionRef} className={cn("w-full py-12 md:py-24 lg:py-32 bg-secondary/50 transition-opacity duration-1000 ease-in", isVisible ? 'opacity-100' : 'opacity-0')}>
             <div className="container px-4 md:px-6">
                 <div className="grid md:grid-cols-2 gap-10 lg:gap-20 items-center">
-                    <div className="space-y-6">
+                    <div className={cn("space-y-6 transition-all duration-700 ease-out", isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0')}>
                         <div className="space-y-3">
                             <h2 className="text-3xl font-bold tracking-tighter font-headline md:text-4xl/tight text-foreground">
                                 Para Quem É o Curso <span className="text-primary">Destrava Tech?</span>
@@ -34,7 +42,7 @@ export default function Audience() {
                             ))}
                         </ul>
                     </div>
-                    <div className="relative group overflow-hidden rounded-xl h-full">
+                    <div className={cn("relative group overflow-hidden rounded-xl h-full transition-all duration-700 ease-out delay-200", isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0')}>
                         <Image
                             src={placeholderImages['audience-person-using-phone'].src}
                             width={placeholderImages['audience-person-using-phone'].width}
