@@ -7,6 +7,10 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import placeholderImages from '@/lib/placeholder-images.json';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
+import { useRef } from 'react';
+import { cn } from '@/lib/utils';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const barChartData = [
     { month: 'MAIO', members: 1600, fill: "hsl(var(--chart-4))" },
@@ -32,26 +36,31 @@ const communityImages = [
     placeholderImages['testimonial-screenshot-2'],
 ];
 
-const RadialChartComponent = ({ data, label }: { data: {name: string, value: number, fill: string}[], label: string }) => (
+const RadialChartComponent = ({ data, label, isVisible }: { data: {name: string, value: number, fill: string}[], label: string, isVisible: boolean }) => (
     <div className="flex flex-col items-center justify-center">
         <div className="relative h-36 w-36 sm:h-40 sm:w-40">
-            <ResponsiveContainer width="100%" height="100%">
-                <RadialBarChart
-                    innerRadius="80%"
-                    outerRadius="100%"
-                    data={data}
-                    startAngle={90}
-                    endAngle={-270}
-                >
-                    <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />
-                    <RadialBar
-                        background={{ fill: 'hsla(var(--muted-foreground), 0.1)' }}
-                        dataKey="value"
-                        cornerRadius={30}
-                        angleAxisId={0}
-                    />
-                </RadialBarChart>
-            </ResponsiveContainer>
+            {isVisible ? (
+                 <ResponsiveContainer width="100%" height="100%">
+                    <RadialBarChart
+                        innerRadius="80%"
+                        outerRadius="100%"
+                        data={data}
+                        startAngle={90}
+                        endAngle={-270}
+                    >
+                        <PolarAngleAxis type="number" domain={[0, 100]} angleAxisId={0} tick={false} />
+                        <RadialBar
+                            background={{ fill: 'hsla(var(--muted-foreground), 0.1)' }}
+                            dataKey="value"
+                            cornerRadius={30}
+                            angleAxisId={0}
+                            animationDuration={1500}
+                        />
+                    </RadialBarChart>
+                </ResponsiveContainer>
+            ) : (
+                <Skeleton className="w-full h-full rounded-full" />
+            )}
             <div className="absolute inset-0 flex items-center justify-center">
                 <span className="text-3xl sm:text-4xl font-bold font-headline text-foreground">{data[0].value}%</span>
             </div>
@@ -62,8 +71,11 @@ const RadialChartComponent = ({ data, label }: { data: {name: string, value: num
 
 
 export default function Community() {
+    const sectionRef = useRef<HTMLDivElement>(null);
+    const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.2 });
+
     return (
-        <section id="community" className="w-full py-12 md:py-24 lg:py-32 bg-secondary/80">
+        <section id="community" ref={sectionRef} className={cn("w-full py-12 md:py-24 lg:py-32 bg-secondary/80 transition-opacity duration-1000 ease-in", isVisible ? 'opacity-100' : 'opacity-0')}>
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center text-center space-y-2 mb-12">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">Conheça nossa Comunidade</h2>
@@ -93,37 +105,47 @@ export default function Community() {
                         <Card className="bg-card/95 backdrop-blur-sm border-border/50 shadow-lg p-4">
                             <h3 className="text-lg font-bold font-headline mb-4 text-left">Crescimento de Membros</h3>
                             <div className="h-48">
-                                <ResponsiveContainer width="100%" height="100%">
-                                    <RechartsBarChart data={barChartData} margin={{ top: 20, right: 0, left: -20, bottom: 5 }} barGap={12} barCategoryGap="20%">
-                                        <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
-                                        <YAxis
-                                            stroke="hsl(var(--muted-foreground))"
-                                            fontSize={12}
-                                            tickLine={false}
-                                            axisLine={false}
-                                            tickFormatter={(value) => `${value}`}
-                                            domain={[0, 'dataMax + 300']}
-                                        />
-                                        <Tooltip
-                                            contentStyle={{
-                                                backgroundColor: "hsl(var(--background))",
-                                                border: "1px solid hsl(var(--border))",
-                                                borderRadius: "var(--radius)"
-                                            }}
-                                            labelStyle={{color: "hsl(var(--foreground))"}}
-                                            cursor={{ fill: 'hsla(var(--muted), 0.5)' }}
-                                        />
-                                        <Bar dataKey="members" radius={[10, 10, 0, 0]} />
-                                    </RechartsBarChart>
-                                </ResponsiveContainer>
+                                {isVisible ? (
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <RechartsBarChart data={barChartData} margin={{ top: 20, right: 0, left: -20, bottom: 5 }} barGap={12} barCategoryGap="20%">
+                                            <XAxis dataKey="month" stroke="hsl(var(--muted-foreground))" fontSize={12} tickLine={false} axisLine={false} />
+                                            <YAxis
+                                                stroke="hsl(var(--muted-foreground))"
+                                                fontSize={12}
+                                                tickLine={false}
+                                                axisLine={false}
+                                                tickFormatter={(value) => `${value}`}
+                                                domain={[0, 'dataMax + 300']}
+                                            />
+                                            <Tooltip
+                                                contentStyle={{
+                                                    backgroundColor: "hsl(var(--background))",
+                                                    border: "1px solid hsl(var(--border))",
+                                                    borderRadius: "var(--radius)"
+                                                }}
+                                                labelStyle={{color: "hsl(var(--foreground))"}}
+                                                cursor={{ fill: 'hsla(var(--muted), 0.5)' }}
+                                            />
+                                            <Bar dataKey="members" radius={[10, 10, 0, 0]} animationDuration={1500} />
+                                        </RechartsBarChart>
+                                    </ResponsiveContainer>
+                                ) : (
+                                    <div className="w-full h-full flex items-end gap-4 px-4">
+                                        <Skeleton className="w-1/5 h-[50%] rounded-t-lg"/>
+                                        <Skeleton className="w-1/5 h-[65%] rounded-t-lg"/>
+                                        <Skeleton className="w-1/5 h-[80%] rounded-t-lg"/>
+                                        <Skeleton className="w-1/5 h-[90%] rounded-t-lg"/>
+                                        <Skeleton className="w-1/5 h-full rounded-t-lg"/>
+                                    </div>
+                                )}
                             </div>
                         </Card>
                         
                         {/* Radial Charts */}
                         <div className="grid grid-cols-3 gap-4">
-                           <RadialChartComponent data={satisfactionData} label="Satisfação" />
-                           <RadialChartComponent data={retentionData} label="Retenção" />
-                           <RadialChartComponent data={supportData} label="Suporte" />
+                           <RadialChartComponent data={satisfactionData} label="Satisfação" isVisible={isVisible} />
+                           <RadialChartComponent data={retentionData} label="Retenção" isVisible={isVisible} />
+                           <RadialChartComponent data={supportData} label="Suporte" isVisible={isVisible} />
                         </div>
 
                     </div>
