@@ -23,7 +23,7 @@ const bonuses = [
     { 
         title: "Servidores e Ferramentas Exclusivas", 
         description: "Acesso exclusivo a servidores e ferramentas profissionais para facilitar o processo de desbloqueio.",
-        image: "https://i.postimg.cc/Jh6JkZRQ/bonus-3-removebg-preview.png"
+        image: "https://i.postimg.cc/8CSDm0zp/bonus-4-removebg-preview.png"
     },
     { 
         title: "Ferramentas para Assistências Técnicas", 
