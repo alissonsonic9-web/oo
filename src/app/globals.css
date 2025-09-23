@@ -77,13 +77,10 @@
 }
 
 @layer base {
-  html {
-    @apply scroll-smooth;
+  body {
+    @apply bg-background text-secondary-foreground;
   }
   * {
     @apply border-border;
-  }
-  body {
-    @apply bg-background text-secondary-foreground;
   }
 }

@@ -5,7 +5,6 @@ import { ResponsiveContainer, BarChart as RechartsBarChart, Bar, XAxis, YAxis, T
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import placeholderImages from '@/lib/placeholder-images.json';
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 import { useRef } from 'react';
@@ -64,8 +63,11 @@ const RadialChartComponent = ({ data, label, isVisible }: { data: {name: string,
     </div>
 );
 
+interface CommunityProps {
+  onCtaClick: () => void;
+}
 
-export default function Community() {
+export default function Community({ onCtaClick }: CommunityProps) {
     const sectionRef = useRef<HTMLDivElement>(null);
     const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.2 });
 
@@ -181,8 +183,8 @@ export default function Community() {
                         </Carousel>
 
                         <div className="flex flex-col items-center gap-4 text-center">
-                            <Button asChild size="lg" className="font-bold">
-                                <Link href="#pricing">QUERO FAZER PARTE</Link>
+                            <Button onClick={onCtaClick} size="lg" className="font-bold">
+                                QUERO FAZER PARTE
                             </Button>
                             <p className="text-sm text-muted-foreground max-w-xs">Junte-se a milhares de alunos e comece a faturar com desbloqueios hoje mesmo.</p>
                         </div>

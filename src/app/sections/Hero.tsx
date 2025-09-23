@@ -1,12 +1,16 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import placeholderImages from '@/lib/placeholder-images.json';
+"use client";
 
-export default function Hero() {
+import { Button } from '@/components/ui/button';
+
+interface HeroProps {
+  onCtaClick: () => void;
+}
+
+export default function Hero({ onCtaClick }: HeroProps) {
   return (
     <section
       className="relative w-full py-20 md:py-32 lg:py-40 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('${placeholderImages['hero-background'].src}')` }}
+      style={{ backgroundImage: `url('https://i.postimg.cc/mgHFJ21y/Design-sem-nome-2.png')` }}
     >
       <div className="absolute inset-0 bg-black/60" />
       <div className="container relative z-10 px-4 md:px-6">
@@ -17,8 +21,8 @@ export default function Hero() {
             </h1>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row pt-4">
-            <Button asChild size="lg" className="font-bold text-lg py-7 px-8">
-              <Link href="#pricing">QUERO APRENDER AGORA!</Link>
+            <Button onClick={onCtaClick} size="lg" className="font-bold text-lg py-7 px-8">
+              QUERO APRENDER AGORA!
             </Button>
           </div>
         </div>

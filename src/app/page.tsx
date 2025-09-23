@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from '@/app/sections/Hero';
 import Community from '@/app/sections/Community';
 import Curriculum from '@/app/sections/Curriculum';
@@ -11,16 +13,23 @@ import Faq from '@/app/sections/Faq';
 import Footer from '@/components/Footer';
 
 export default function Home() {
+  const handleScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
       <main className="flex-grow">
-        <Hero />
+        <Hero onCtaClick={() => handleScrollTo('pricing')} />
         <Curriculum />
-        <Bonuses />
+        <Bonuses onCtaClick={() => handleScrollTo('pricing')} />
         <Testimonials />
         <Pricing />
         <Audience />
-        <Community />
+        <Community onCtaClick={() => handleScrollTo('pricing')} />
         <Marquee />
         <Guarantee />
         <Faq />
