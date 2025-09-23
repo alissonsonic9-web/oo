@@ -1,4 +1,3 @@
-import Header from '@/components/Header';
 import Hero from '@/app/sections/Hero';
 import Community from '@/app/sections/Community';
 import Curriculum from '@/app/sections/Curriculum';
@@ -14,7 +13,6 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background overflow-x-hidden">
-      <Header />
       <main className="flex-grow">
         <Hero />
         <Curriculum />
