@@ -6,11 +6,11 @@ import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const barChartData = [
-    { month: 'MAIO', members: 750, fill: "hsl(var(--chart-4))" },
-    { month: 'JUNHO', members: 850, fill: "hsl(var(--chart-2))" },
-    { month: 'JULHO', members: 900, fill: "hsl(var(--chart-1))" },
-    { month: 'AGOSTO', members: 950, fill: "hsl(var(--chart-5))" },
-    { month: 'HOJE', members: 1000, fill: "hsl(var(--primary))" },
+    { month: 'MAIO', members: 2800, fill: "hsl(var(--chart-4))" },
+    { month: 'JUNHO', members: 3100, fill: "hsl(var(--chart-2))" },
+    { month: 'JULHO', members: 3300, fill: "hsl(var(--chart-1))" },
+    { month: 'AGOSTO', members: 3500, fill: "hsl(var(--chart-5))" },
+    { month: 'HOJE', members: 3700, fill: "hsl(var(--primary))" },
 ];
 
 const satisfactionData = [{ name: 'Satisfação', value: 95, fill: 'hsl(var(--primary))' }];
@@ -92,8 +92,8 @@ export default function Community() {
                                             fontSize={12}
                                             tickLine={false}
                                             axisLine={false}
-                                            tickFormatter={(value) => `${value}+`}
-                                            domain={[0, 'dataMax + 100']}
+                                            tickFormatter={(value) => `${value}`}
+                                            domain={[0, 'dataMax + 300']}
                                         />
                                         <Tooltip
                                             contentStyle={{
