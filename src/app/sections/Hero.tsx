@@ -1,11 +1,12 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import placeholderImages from '@/lib/placeholder-images.json';
 
 export default function Hero() {
   return (
     <section
       className="relative w-full py-20 md:py-32 lg:py-40 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('https://i.postimg.cc/d0mZ2C11/Chat-GPT-Image-7-de-set-de-2025-14-00-45-Editado.png')" }}
+      style={{ backgroundImage: `url('${placeholderImages['hero-background'].src}')` }}
     >
       <div className="absolute inset-0 bg-black/60" />
       <div className="container relative z-10 px-4 md:px-6">

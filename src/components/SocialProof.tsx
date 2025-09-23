@@ -3,17 +3,17 @@
 import { ShoppingCart } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
-const purchases = [
-    { name: "Gustavo", location: "São Paulo, SP" },
-    { name: "Mariana", location: "Rio de Janeiro, RJ" },
-    { name: "Lucas", location: "Belo Horizonte, MG" },
-    { name: "Fernanda", location: "Salvador, BA" },
-    { name: "Ricardo", location: "Curitiba, PR" },
-    { name: "Juliana", location: "Porto Alegre, RS" },
-    { name: "Pedro", location: "Fortaleza, CE" },
-    { name: "Ana", location: "Brasília, DF" },
-    { name: "Carlos", location: "Recife, PE" },
-    { name: "Beatriz", location: "Manaus, AM" },
+const maleNames = [
+    "Gustavo", "Lucas", "Ricardo", "Pedro", "Carlos", "João", "Rafael", "Thiago", 
+    "Bruno", "Leandro", "Felipe", "Daniel", "Eduardo", "Marcelo", "André", "Rodrigo",
+    "Vinicius", "Alexandre", "Fernando", "Diego", "Márcio", "Sérgio", "Paulo", "Antônio"
+];
+const femaleNames = ["Mariana", "Fernanda", "Juliana", "Ana", "Beatriz"];
+
+const locations = [
+    "São Paulo, SP", "Rio de Janeiro, RJ", "Belo Horizonte, MG", "Salvador, BA",
+    "Curitiba, PR", "Porto Alegre, RS", "Fortaleza, CE", "Brasília, DF",
+    "Recife, PE", "Manaus, AM", "Goiânia, GO", "Belém, PA"
 ];
 
 export default function SocialProof() {
@@ -23,21 +23,24 @@ export default function SocialProof() {
 
     useEffect(() => {
         const showRandomPurchase = () => {
-            const randomIndex = Math.floor(Math.random() * purchases.length);
-            setCurrentPurchase(purchases[randomIndex]);
+            const isMale = Math.random() < 0.9;
+            const name = isMale 
+                ? maleNames[Math.floor(Math.random() * maleNames.length)]
+                : femaleNames[Math.floor(Math.random() * femaleNames.length)];
+            
+            const location = locations[Math.floor(Math.random() * locations.length)];
+
+            setCurrentPurchase({ name, location });
             setPurchaseCount((prevCount) => prevCount + 1);
             setIsVisible(true);
 
             setTimeout(() => {
                 setIsVisible(false);
-            }, 5000); // Fica visível por 5 segundos
+            }, 5000);
         };
 
-        // Mostra a primeira notificação após um pequeno delay inicial
         const initialTimeout = setTimeout(showRandomPurchase, 3000);
-
-        // Define o intervalo para mostrar as próximas notificações
-        const interval = setInterval(showRandomPurchase, 20000); // A cada 20 segundos
+        const interval = setInterval(showRandomPurchase, 20000);
 
         return () => {
             clearTimeout(initialTimeout);

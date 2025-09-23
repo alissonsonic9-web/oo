@@ -1,6 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Gift } from 'lucide-react';
 import Image from "next/image";
+import placeholderImages from '@/lib/placeholder-images.json';
 
 const modules = [
     { 
@@ -83,10 +84,10 @@ export default function Curriculum() {
                           <Gift size={32} />
                       ) : (
                           <Image
-                              src="https://i.postimg.cc/cH2CBcgd/IMG-20250923-WA0072.webp"
-                              width={64}
-                              height={64}
-                              alt="Ícone do módulo"
+                              src={placeholderImages['module-icon'].src}
+                              width={placeholderImages['module-icon'].width}
+                              height={placeholderImages['module-icon'].height}
+                              alt={placeholderImages['module-icon'].alt}
                               className="object-cover w-full h-full"
                           />
                       )}

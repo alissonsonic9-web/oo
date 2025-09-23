@@ -1,5 +1,6 @@
 import { CheckCircle2 } from 'lucide-react';
 import Image from "next/image";
+import placeholderImages from '@/lib/placeholder-images.json';
 
 const audienceList = [
     "Técnicos de manutenção de celulares",
@@ -35,14 +36,14 @@ export default function Audience() {
                     </div>
                     <div className="relative group overflow-hidden rounded-xl">
                         <Image
-                            src="https://i.postimg.cc/K8yRn54H/Chat-GPT-Image-7-de-set-de-2025-12-25-30.png"
-                            width={550}
-                            height={400}
-                            alt="Para quem é o curso"
-                            data-ai-hint="person using phone"
+                            src={placeholderImages['audience-person-using-phone'].src}
+                            width={placeholderImages['audience-person-using-phone'].width}
+                            height={placeholderImages['audience-person-using-phone'].height}
+                            alt={placeholderImages['audience-person-using-phone'].alt}
+                            data-ai-hint={placeholderImages['audience-person-using-phone'].hint}
                             className="mx-auto rounded-xl object-cover shadow-lg transition-transform duration-300 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-transparent particles-overlay"></div>
+                         <div className="absolute inset-0 bg-transparent particles-overlay"></div>
                     </div>
                 </div>
             </div>
