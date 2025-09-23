@@ -1,7 +1,4 @@
 "use client"
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useState, useRef } from "react";
 import { Play, Pause, RotateCcw } from "lucide-react";
 
@@ -58,8 +55,8 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto pt-12">
-            <div className="relative aspect-video overflow-hidden rounded-xl border-4 border-primary shadow-2xl group">
+        <div className="w-full mx-auto pt-12">
+            <div className="relative aspect-video overflow-hidden rounded-xl border-4 border-primary shadow-2xl group max-w-4xl mx-auto">
                 <video
                     ref={videoRef}
                     src="https://www.dropbox.com/scl/fi/9qlokmmc8qpqmh0shlc4y/IMG_0522-1-Compressed-with-FlexClip.mp4?rlkey=69ycrvly5y2q3zf9opu0x6khv&st=ywt29ysq&raw=1"
