@@ -19,7 +19,7 @@ const easeOutExpo = (t: number) => {
 export default function AnimatedCounter({ 
     from = 0, 
     to, 
-    duration = 2000, 
+    duration = 2500, 
     isVisible,
     prefix = '',
     suffix = '',
