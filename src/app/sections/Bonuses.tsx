@@ -1,3 +1,6 @@
+"use client";
+
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Gift } from "lucide-react";
 import Link from "next/link";
@@ -22,16 +25,20 @@ export default function Bonuses() {
                     No <span className="text-primary font-bold">plano premium</span>, você ganha 6 bônus que valem mais que o próprio curso:
                 </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl w-full">
-                {bonuses.map((bonus, index) => (
-                    <div key={index} className="flex items-start text-left gap-3 p-4 rounded-lg bg-card border">
-                        <Gift className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                        <div>
-                            <h3 className="font-semibold">{bonus.title}</h3>
-                            <p className="text-sm text-muted-foreground">{bonus.description}</p>
-                        </div>
-                    </div>
-                ))}
+            <div className="w-full max-w-4xl">
+              <Accordion type="single" collapsible className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {bonuses.map((bonus, index) => (
+                      <AccordionItem key={index} value={`item-${index}`} className="bg-card border rounded-lg shadow-sm">
+                          <AccordionTrigger className="flex items-start text-left gap-3 p-4 hover:no-underline">
+                              <Gift className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                              <span className="font-semibold flex-1">{bonus.title}</span>
+                          </AccordionTrigger>
+                          <AccordionContent className="px-4 pb-4 text-left ml-9">
+                              <p className="text-sm text-muted-foreground">{bonus.description}</p>
+                          </AccordionContent>
+                      </AccordionItem>
+                  ))}
+              </Accordion>
             </div>
             <Button asChild size="lg" className="font-bold">
                 <Link href="#pricing">QUERO TODOS OS BÔNUS AGORA</Link>
