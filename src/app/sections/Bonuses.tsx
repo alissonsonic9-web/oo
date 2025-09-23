@@ -30,8 +30,10 @@ export default function Bonuses() {
                   {bonuses.map((bonus, index) => (
                       <AccordionItem key={index} value={`item-${index}`} className="bg-card border rounded-lg shadow-sm">
                           <AccordionTrigger className="flex items-start text-left gap-3 p-4 hover:no-underline">
-                              <Gift className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                              <span className="font-semibold flex-1">{bonus.title}</span>
+                              <div className="flex items-start gap-3 flex-1">
+                                <Gift className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+                                <span className="font-semibold text-left flex-1">{bonus.title}</span>
+                              </div>
                           </AccordionTrigger>
                           <AccordionContent className="px-4 pb-4 text-left ml-9">
                               <p className="text-sm text-muted-foreground">{bonus.description}</p>
