@@ -78,7 +78,7 @@ export default function Curriculum() {
             {modules.map((module) => (
               <AccordionItem key={module.number} value={`item-${module.number}`} className="border-b-0 rounded-lg bg-card shadow-md data-[state=open]:shadow-xl transition-shadow">
                 <AccordionTrigger className="flex items-center gap-4 p-6 text-left hover:no-underline">
-                  <div className={`flex h-16 w-16 items-center justify-center rounded-md font-bold text-3xl font-headline flex-shrink-0 overflow-hidden ${module.number !== '🎁' ? 'bg-black text-primary-foreground shadow-[0_0_15px_hsl(var(--accent))] transition-all' : 'bg-primary text-primary-foreground'}`}>
+                  <div className={`flex h-16 w-16 items-center justify-center rounded-md font-bold text-3xl font-headline flex-shrink-0 overflow-hidden transition-all shadow-[0_0_15px_hsl(var(--accent))] ${module.number !== '🎁' ? 'bg-black text-primary-foreground' : 'bg-primary text-primary-foreground'}`}>
                       {module.number === '🎁' ? (
                           <Gift size={32} />
                       ) : (
