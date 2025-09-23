@@ -1,6 +1,5 @@
 import Header from '@/components/Header';
 import Hero from '@/app/sections/Hero';
-import ProblemSolution from '@/app/sections/ProblemSolution';
 import Community from '@/app/sections/Community';
 import Curriculum from '@/app/sections/Curriculum';
 import Audience from '@/app/sections/Audience';
@@ -24,7 +23,6 @@ export default function Home() {
         <Pricing />
         <Audience />
         <Community />
-        <ProblemSolution />
         <Marquee />
         <Guarantee />
         <Faq />
