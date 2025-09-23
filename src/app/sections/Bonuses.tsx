@@ -59,7 +59,7 @@ export default function Bonuses() {
             </div>
             <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
               {bonuses.map((bonus, index) => (
-                <div key={index} className="group relative flex flex-col items-center text-center bg-card border border-border/20 rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-accent">
+                <div key={index} className="group relative flex flex-col items-center text-center bg-card border border-border/20 rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-accent hover:shadow-accent/20">
                     <div className="absolute inset-0 rounded-xl transition-all duration-300 group-hover:shadow-[0_0_25px_-5px_hsl(var(--accent))] opacity-75"></div>
                     <div className="relative z-10 flex flex-col items-center h-full">
                         <Image
