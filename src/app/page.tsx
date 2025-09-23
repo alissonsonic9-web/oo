@@ -30,9 +30,9 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <>
       <Countdown />
-      <main className="flex-grow">
+      <main className="flex-grow bg-background">
         <Hero onCtaClick={() => handleScrollTo('pricing')} />
         <Curriculum />
         <Bonuses onCtaClick={() => handleScrollTo('pricing')} />
@@ -45,6 +45,6 @@ export default function Home() {
         <Faq />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
