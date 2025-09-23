@@ -31,21 +31,19 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative bg-background">
-        <Countdown />
-        <main className="flex-grow">
-          <Hero onCtaClick={() => handleScrollTo('pricing')} />
-          <Curriculum />
-          <Bonuses onCtaClick={() => handleScrollTo('pricing')} />
-          <Testimonials />
-          <Pricing />
-          <Audience />
-          <Community onCtaClick={() => handleScrollTo('pricing')} />
-          <Marquee />
-          <Guarantee />
-          <Faq />
-        </main>
-      </div>
+      <Countdown />
+      <main className="flex-grow bg-background">
+        <Hero onCtaClick={() => handleScrollTo('pricing')} />
+        <Curriculum />
+        <Bonuses onCtaClick={() => handleScrollTo('pricing')} />
+        <Testimonials />
+        <Pricing />
+        <Audience />
+        <Community onCtaClick={() => handleScrollTo('pricing')} />
+        <Marquee />
+        <Guarantee />
+        <Faq />
+      </main>
       <Footer />
     </>
   );
