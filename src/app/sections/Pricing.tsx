@@ -54,7 +54,7 @@ export default function Pricing() {
                         </div>
                         <CardHeader className="pb-4">
                             <CardTitle className="font-headline text-accent">🔴 Pacote Premium</CardTitle>
-                            <div className="flex items-baseline gap-2">
+                            <div className="flex items-baseline gap-2 text-accent">
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$29,90</span>
                                 <span className="text-xl font-medium text-muted-foreground line-through">R$197,00</span>
                             </div>
