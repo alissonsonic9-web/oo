@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const purchases = [
@@ -59,7 +59,7 @@ export default function SocialProof() {
         >
             <div className="flex items-start gap-4">
                 <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
-                    <CheckCircle className="h-6 w-6 text-primary" />
+                    <ShoppingCart className="h-6 w-6 text-primary" />
                 </div>
                 <div>
                     <p className="font-bold text-sm text-foreground">
