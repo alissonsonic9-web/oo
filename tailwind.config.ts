@@ -114,6 +114,10 @@ export default {
             transform: 'scale(1.025)',
           },
         },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -122,6 +126,7 @@ export default {
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'fade-out-down': 'fade-out-down 0.5s ease-in forwards',
         'subtle-pulse': 'subtle-pulse 4s infinite ease-in-out',
+        'float': 'float 6s ease-in-out infinite',
       },
     },
   },

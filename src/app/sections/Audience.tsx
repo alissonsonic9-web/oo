@@ -41,7 +41,7 @@ export default function Audience() {
                             height={placeholderImages['audience-person-using-phone'].height}
                             alt={placeholderImages['audience-person-using-phone'].alt}
                             data-ai-hint={placeholderImages['audience-person-using-phone'].hint}
-                            className="mx-auto rounded-xl object-cover shadow-lg h-full w-full"
+                            className="mx-auto rounded-xl object-cover shadow-lg h-full w-full animate-float"
                         />
                     </div>
                 </div>
