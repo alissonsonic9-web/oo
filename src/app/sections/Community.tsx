@@ -6,10 +6,10 @@ import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const barChartData = [
-    { month: 'MAIO', members: 2800, fill: "hsl(var(--chart-4))" },
-    { month: 'JUNHO', members: 3100, fill: "hsl(var(--chart-2))" },
-    { month: 'JULHO', members: 3300, fill: "hsl(var(--chart-1))" },
-    { month: 'AGOSTO', members: 3500, fill: "hsl(var(--chart-5))" },
+    { month: 'MAIO', members: 1600, fill: "hsl(var(--chart-4))" },
+    { month: 'JUNHO', members: 2100, fill: "hsl(var(--chart-2))" },
+    { month: 'JULHO', members: 2800, fill: "hsl(var(--chart-1))" },
+    { month: 'AGOSTO', members: 3200, fill: "hsl(var(--chart-5))" },
     { month: 'HOJE', members: 3700, fill: "hsl(var(--primary))" },
 ];
 
