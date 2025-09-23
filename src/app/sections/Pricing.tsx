@@ -18,7 +18,7 @@ export default function Pricing() {
     ];
 
     return (
-        <section id="pricing" className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <section id="pricing" className="w-full py-12 md:py-24 lg:py-32">
             <div className="container px-4 md:px-6">
                 <div className="flex flex-col items-center space-y-4 text-center">
                     <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">🔥 Escolha Seu Plano</h2>
@@ -27,8 +27,8 @@ export default function Pricing() {
                 <div className="mx-auto grid max-w-sm gap-8 pt-12 lg:max-w-4xl lg:grid-cols-2 items-start">
                     <Card className="flex flex-col shadow-md">
                         <CardHeader className="pb-4">
-                            <CardTitle className="font-headline text-primary">🟠 Pacote Básico</CardTitle>
-                            <div className="flex items-baseline gap-2 text-accent">
+                            <CardTitle className="font-headline" style={{ color: 'hsl(var(--primary))' }}>🟠 Pacote Básico</CardTitle>
+                            <div className="flex items-baseline gap-2" style={{ color: '#3399FF' }}>
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$17,90</span>
                             </div>
                         </CardHeader>
@@ -53,8 +53,8 @@ export default function Pricing() {
                             <Star className="h-4 w-4" /> MAIS ESCOLHIDO
                         </div>
                         <CardHeader className="pb-4">
-                            <CardTitle className="font-headline text-primary">🔴 Pacote Premium</CardTitle>
-                            <div className="flex items-baseline gap-2 text-accent">
+                            <CardTitle className="font-headline" style={{ color: 'hsl(var(--primary))' }}>🔴 Pacote Premium</CardTitle>
+                            <div className="flex items-baseline gap-2" style={{ color: '#3399FF' }}>
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$29,90</span>
                                 <span className="text-xl font-medium text-muted-foreground line-through">R$197,00</span>
                             </div>

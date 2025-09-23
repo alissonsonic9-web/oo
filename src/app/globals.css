@@ -12,7 +12,7 @@
     --popover-foreground: 210 100% 30%;
     --primary: 145 63% 42%; /* #28A745 - Verde (CTA) */
     --primary-foreground: 0 0% 100%; /* #FFFFFF - Texto branco no botão */
-    --secondary: 0 0% 98%; /* #F9F9F9 - Bege Claro */
+    --secondary: 0 0% 88%; /* #E1E1E1 - Mesmo que o background para fundo uniforme */
     --secondary-foreground: 0 0% 20%; /* #333333 - Cinza Escuro */
     --muted: 0 0% 98%; /* #F9F9F9 - Bege Claro */
     --muted-foreground: 0 0% 40%;
