@@ -11,17 +11,27 @@ import Marquee from '@/app/sections/Marquee';
 import Guarantee from '@/app/sections/Guarantee';
 import Faq from '@/app/sections/Faq';
 import Footer from '@/components/Footer';
+import Countdown from '@/components/Countdown';
 
 export default function Home() {
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Adjust scroll position to account for the sticky countdown header
+      const headerOffset = 60; // Height of the countdown component
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
     }
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
+      <Countdown />
       <main className="flex-grow">
         <Hero onCtaClick={() => handleScrollTo('pricing')} />
         <Curriculum />
