@@ -34,14 +34,14 @@ export default function Audience() {
                             ))}
                         </ul>
                     </div>
-                    <div className="relative group overflow-hidden rounded-xl">
+                    <div className="relative group overflow-hidden rounded-xl h-full">
                         <Image
                             src={placeholderImages['audience-person-using-phone'].src}
                             width={placeholderImages['audience-person-using-phone'].width}
                             height={placeholderImages['audience-person-using-phone'].height}
                             alt={placeholderImages['audience-person-using-phone'].alt}
                             data-ai-hint={placeholderImages['audience-person-using-phone'].hint}
-                            className="mx-auto rounded-xl object-cover shadow-lg transition-transform duration-300 group-hover:scale-105"
+                            className="mx-auto rounded-xl object-cover shadow-lg h-full w-full"
                         />
                          <div className="absolute inset-0 bg-transparent particles-overlay"></div>
                     </div>
