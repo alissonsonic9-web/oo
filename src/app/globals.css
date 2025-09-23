@@ -4,28 +4,28 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* #FFFFFF */
-    --foreground: 0 0% 0%; /* #000000 */
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 33 100% 50%; /* #FF8C00 - Laranja Claro */
+    --background: 0 0% 97%; /* #F7F7F7 */
+    --foreground: 210 100% 30%; /* #004C99 */
+    --card: 0 0% 98%; /* #F9F9F9 */
+    --card-foreground: 210 100% 30%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 210 100% 30%;
+    --primary: 145 63% 42%; /* #28A745 - Verde (CTA) */
     --primary-foreground: 0 0% 100%; /* #FFFFFF - Texto branco no botão */
     --secondary: 0 0% 98%; /* #F9F9F9 - Bege Claro */
     --secondary-foreground: 0 0% 20%; /* #333333 - Cinza Escuro */
     --muted: 0 0% 98%; /* #F9F9F9 - Bege Claro */
     --muted-foreground: 0 0% 40%;
-    --accent: 211 100% 50%; /* #007BFF - Azul Claro */
-    --accent-foreground: 0 0% 100%;
+    --accent: 200 100% 70%; /* #66CCFF - Azul Claro */
+    --accent-foreground: 210 100% 30%;
     --destructive: 145 63% 42%; /* #28A745 - Verde (usado para confirmação) */
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 88%; /* #E0E0E0 - Cinza Claro */
     --input: 0 0% 88%;
-    --ring: 33 100% 50%; /* Laranja para anel de foco */
-    --chart-1: 33 100% 50%; /* Laranja */
+    --ring: 145 63% 42%; /* Verde para anel de foco */
+    --chart-1: 200 100% 70%; /* Azul Claro */
     --chart-2: 145 63% 42%; /* Verde */
-    --chart-3: 211 100% 50%; /* Azul */
+    --chart-3: 210 100% 30%; /* Azul Escuro */
     --chart-4: 5 100% 69%; /* Coral #FF6F61 */
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
@@ -47,32 +47,32 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 33 100% 50%;
+    --primary: 145 63% 42%;
     --primary-foreground: 0 0% 100%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5.9% 64.9%;
-    --accent: 211 100% 50%;
+    --accent: 200 100% 70%;
     --accent-foreground: 0 0% 98%;
     --destructive: 145 63% 42%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 88%;
     --input: 240 3.7% 15.9%;
-    --ring: 33 100% 50%;
-    --chart-1: 33 100% 50%;
+    --ring: 145 63% 42%;
+    --chart-1: 200 100% 70%;
     --chart-2: 145 63% 42%;
-    --chart-3: 211 100% 50%;
+    --chart-3: 210 100% 30%;
     --chart-4: 5 100% 69%;
     --chart-5: 27 87% 67%;
     --sidebar-background: 0 0% 17.3%;
     --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 33 100% 50%;
+    --sidebar-primary: 145 63% 42%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 0 0% 22%;
     --sidebar-accent-foreground: 0 0% 98%;
     --sidebar-border: 0 0% 25.1%;
-    --sidebar-ring: 33 100% 50%;
+    --sidebar-ring: 145 63% 42%;
   }
 }
 
@@ -81,6 +81,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-secondary-foreground;
   }
 }
