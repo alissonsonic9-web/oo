@@ -27,7 +27,7 @@ export default function Pricing() {
                 <div className="mx-auto grid max-w-sm gap-8 pt-12 lg:max-w-4xl lg:grid-cols-2 items-start">
                     <Card className="flex flex-col shadow-md">
                         <CardHeader className="pb-4">
-                            <CardTitle className="font-headline" style={{ color: 'hsl(var(--primary))' }}>🟠 Pacote Básico</CardTitle>
+                            <CardTitle className="font-headline" style={{ color: 'hsl(var(--primary))' }}>Pacote Básico</CardTitle>
                             <div className="flex items-baseline gap-2" style={{ color: '#3399FF' }}>
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$17,90</span>
                             </div>
@@ -35,7 +35,6 @@ export default function Pricing() {
                         <CardContent className="flex-1">
                             <ul className="space-y-2 text-muted-foreground">
                                 <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Curso + Comunidade Destrava Tech</li>
-                                <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> 3 meses de acesso completo</li>
                                 <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Suporte via WhatsApp</li>
                                 <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Garantia de 7 dias</li>
                                 <li className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" /> Sem mensalidades</li>
@@ -53,7 +52,7 @@ export default function Pricing() {
                             <Star className="h-4 w-4" /> MAIS ESCOLHIDO
                         </div>
                         <CardHeader className="pb-4">
-                            <CardTitle className="font-headline" style={{ color: 'hsl(var(--primary))' }}>🔴 Pacote Premium</CardTitle>
+                            <CardTitle className="font-headline" style={{ color: 'hsl(var(--primary))' }}>Pacote Premium</CardTitle>
                             <div className="flex items-baseline gap-2" style={{ color: '#3399FF' }}>
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$29,90</span>
                                 <span className="text-xl font-medium text-muted-foreground line-through">R$197,00</span>
