@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import placeholderImages from '@/lib/placeholder-images.json';
+import Link from "next/link";
 
 const bonuses = [
     { 
@@ -39,14 +40,6 @@ const bonuses = [
 
 export default function Bonuses() {
 
-  const handleScrollToPricing = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="bonuses" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
@@ -80,8 +73,8 @@ export default function Bonuses() {
               })}
             </div>
             <div className="pt-8">
-              <Button size="lg" className="font-bold text-lg py-7 px-10" onClick={handleScrollToPricing}>
-                  QUERO TODOS OS BÔNUS AGORA
+              <Button asChild size="lg" className="font-bold text-lg py-7 px-10">
+                <Link href="#pricing">QUERO TODOS OS BÔNUS AGORA</Link>
               </Button>
             </div>
         </div>
