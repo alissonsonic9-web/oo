@@ -58,7 +58,7 @@ export default function Bonuses({ onCtaClick }: BonusesProps) {
               {bonuses.map((bonus, index) => {
                 const imageData = placeholderImages[bonus.imageKey as keyof typeof placeholderImages];
                 return (
-                    <div key={index} className="group relative flex flex-col items-center text-center bg-card border border-border/20 rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-accent hover:shadow-accent/20 min-h-[300px]">
+                    <div key={index} className="group relative flex flex-col items-center text-center bg-card border border-border/20 rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-2xl hover:border-accent hover:shadow-accent/20 min-h-[280px]">
                         <div className="absolute inset-0 rounded-xl transition-all duration-300 group-hover:shadow-[0_0_25px_-5px_hsl(var(--accent))] opacity-75"></div>
                         <div className="relative z-10 flex flex-col items-center h-full">
                             <Image
