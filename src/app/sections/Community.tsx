@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ResponsiveContainer, BarChart as RechartsBarChart, Bar, XAxis, YAxis, Tooltip, RadialBarChart, RadialBar, PolarAngleAxis } from 'recharts';
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const barChartData = [
     { month: 'MAIO', members: 1600, fill: "hsl(var(--chart-4))" },
@@ -119,43 +121,52 @@ export default function Community() {
 
                     </div>
                     
-                    {/* Community Images */}
-                     <Carousel opts={{ loop: true, align: "start" }} className="w-full max-w-md mx-auto">
-                        <CarouselContent>
-                            <CarouselItem className="basis-10/12 md:basis-11/12">
-                                <Image 
-                                    src="https://i.postimg.cc/d05LnVmg/316058478-870152138-expert-02-1.jpg"
-                                    width={400}
-                                    height={600}
-                                    alt="Comunidade Destrava Tech"
-                                    data-ai-hint="community chat screenshot"
-                                    className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
-                                />
-                            </CarouselItem>
-                            <CarouselItem className="basis-10/12 md:basis-11/12">
-                                <Image 
-                                    src="https://i.postimg.cc/Qt15mWSS/Design-sem-nome.png"
-                                    width={400}
-                                    height={600}
-                                    alt="Depoimento de aluno"
-                                    data-ai-hint="testimonial screenshot"
-                                    className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
-                                />
-                            </CarouselItem>
-                             <CarouselItem className="basis-10/12 md:basis-11/12">
-                                <Image 
-                                    src="https://i.postimg.cc/HjGhK5Cx/Design-sem-nome-1.png"
-                                    width={400}
-                                    height={600}
-                                    alt="Depoimento de aluno 2"
-                                    data-ai-hint="testimonial screenshot"
-                                    className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
-                                />
-                            </CarouselItem>
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel>
+                    <div className="flex flex-col items-center gap-8">
+                        {/* Community Images */}
+                        <Carousel opts={{ loop: true, align: "start" }} className="w-full max-w-md mx-auto">
+                            <CarouselContent>
+                                <CarouselItem className="basis-10/12 md:basis-11/12">
+                                    <Image 
+                                        src="https://i.postimg.cc/d05LnVmg/316058478-870152138-expert-02-1.jpg"
+                                        width={400}
+                                        height={600}
+                                        alt="Comunidade Destrava Tech"
+                                        data-ai-hint="community chat screenshot"
+                                        className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
+                                    />
+                                </CarouselItem>
+                                <CarouselItem className="basis-10/12 md:basis-11/12">
+                                    <Image 
+                                        src="https://i.postimg.cc/Qt15mWSS/Design-sem-nome.png"
+                                        width={400}
+                                        height={600}
+                                        alt="Depoimento de aluno"
+                                        data-ai-hint="testimonial screenshot"
+                                        className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
+                                    />
+                                </CarouselItem>
+                                <CarouselItem className="basis-10/12 md:basis-11/12">
+                                    <Image 
+                                        src="https://i.postimg.cc/HjGhK5Cx/Design-sem-nome-1.png"
+                                        width={400}
+                                        height={600}
+                                        alt="Depoimento de aluno 2"
+                                        data-ai-hint="testimonial screenshot"
+                                        className="rounded-xl shadow-2xl object-cover w-full h-auto border-4 border-accent"
+                                    />
+                                </CarouselItem>
+                            </CarouselContent>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </Carousel>
+
+                        <div className="flex flex-col items-center gap-4 text-center">
+                            <Button asChild size="lg" className="font-bold">
+                                <Link href="#pricing">QUERO FAZER PARTE</Link>
+                            </Button>
+                            <p className="text-sm text-muted-foreground max-w-xs">Junte-se a milhares de alunos e comece a faturar com desbloqueios hoje mesmo.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
