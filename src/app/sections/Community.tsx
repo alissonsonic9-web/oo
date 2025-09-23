@@ -48,7 +48,7 @@ const RadialChartComponent = ({ data, label, isVisible }: { data: {name: string,
                             dataKey="value"
                             cornerRadius={30}
                             angleAxisId={0}
-                            animationDuration={2500}
+                            animationDuration={3500}
                         />
                     </RadialBarChart>
                 </ResponsiveContainer>
@@ -137,7 +137,7 @@ export default function Community({ onCtaClick }: CommunityProps) {
                                                 labelStyle={{color: "hsl(var(--foreground))"}}
                                                 cursor={{ fill: 'hsla(var(--muted), 0.5)' }}
                                             />
-                                            <Bar dataKey="members" radius={[10, 10, 0, 0]} animationDuration={2500} />
+                                            <Bar dataKey="members" radius={[10, 10, 0, 0]} animationDuration={3500} />
                                         </RechartsBarChart>
                                     </ResponsiveContainer>
                                 ) : (
