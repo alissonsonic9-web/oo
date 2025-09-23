@@ -2,6 +2,7 @@ import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Countdown from '@/components/Countdown';
+import SocialProof from '@/components/SocialProof';
 
 export const metadata: Metadata = {
   title: 'Destrava Tech',
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Countdown />
         {children}
         <Toaster />
+        <SocialProof />
       </body>
     </html>
   );

@@ -98,11 +98,21 @@ export default {
             boxShadow: '0 0 40px 10px hsl(var(--primary) / 0.8)',
           },
         },
+        'fade-in-up': {
+            '0%': { opacity: '0', transform: 'translateY(10px)' },
+            '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-out-down': {
+            '0%': { opacity: '1', transform: 'translateY(0)' },
+            '100%': { opacity: '0', transform: 'translateY(10px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-glow': 'pulse-glow 2.5s infinite ease-in-out',
+        'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+        'fade-out-down': 'fade-out-down 0.5s ease-in forwards',
       },
     },
   },
