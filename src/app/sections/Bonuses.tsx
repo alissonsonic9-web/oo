@@ -24,7 +24,7 @@ export default function Bonuses() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl w-full">
                 {bonuses.map((bonus, index) => (
-                    <div key={index} className="flex items-start text-left gap-3 p-4 rounded-lg bg-secondary">
+                    <div key={index} className="flex items-start text-left gap-3 p-4 rounded-lg bg-card border">
                         <Gift className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
                         <div>
                             <h3 className="font-semibold">{bonus.title}</h3>
