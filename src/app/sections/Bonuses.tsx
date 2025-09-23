@@ -53,7 +53,7 @@ export default function Bonuses({ onCtaClick }: BonusesProps) {
                     No <span className="text-primary font-bold">plano premium</span>, você ganha 6 bônus que valem mais que o próprio curso:
                 </p>
             </div>
-            <div className="w-full max-w-5xl grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
+            <div className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
               {bonuses.map((bonus, index) => {
                 const imageData = placeholderImages[bonus.imageKey as keyof typeof placeholderImages];
                 return (
