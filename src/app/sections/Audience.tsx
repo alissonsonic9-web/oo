@@ -33,15 +33,16 @@ export default function Audience() {
                             ))}
                         </ul>
                     </div>
-                    <div className="relative flex justify-center group">
+                    <div className="relative group overflow-hidden rounded-xl">
                         <Image
                             src="https://i.postimg.cc/K8yRn54H/Chat-GPT-Image-7-de-set-de-2025-12-25-30.png"
                             width={550}
                             height={400}
                             alt="Para quem é o curso"
                             data-ai-hint="person using phone"
-                            className="mx-auto rounded-xl object-cover shadow-lg transition-shadow duration-300 group-hover:shadow-2xl group-hover:shadow-accent/50"
+                            className="mx-auto rounded-xl object-cover shadow-lg transition-transform duration-300 group-hover:scale-105"
                         />
+                        <div className="absolute inset-0 bg-transparent particles-overlay"></div>
                     </div>
                 </div>
             </div>

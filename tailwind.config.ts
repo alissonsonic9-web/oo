@@ -117,6 +117,14 @@ export default {
             transform: 'rotate(-0.5deg)',
           },
         },
+        'particles': {
+          '0%': {
+            transform: 'translateY(0)',
+          },
+          '100%': {
+            transform: 'translateY(-100%)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -125,6 +133,7 @@ export default {
         'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
         'fade-out-down': 'fade-out-down 0.5s ease-in forwards',
         'tilt': 'tilt 10s infinite linear',
+        'particles': 'particles 20s linear infinite',
       },
     },
   },
