@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle, Gift } from 'lucide-react';
+import Image from "next/image";
 
 const modules = [
     { 
@@ -77,8 +78,18 @@ export default function Curriculum() {
             {modules.map((module) => (
               <AccordionItem key={module.number} value={`item-${module.number}`} className="border-b-0 rounded-lg bg-card shadow-md data-[state=open]:shadow-xl transition-shadow">
                 <AccordionTrigger className="flex items-center gap-4 p-6 text-left hover:no-underline">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-md bg-primary text-primary-foreground font-bold text-3xl font-headline flex-shrink-0">
-                      {module.number === '🎁' ? <Gift size={32} /> : module.number}
+                  <div className="flex h-16 w-16 items-center justify-center rounded-md bg-primary text-primary-foreground font-bold text-3xl font-headline flex-shrink-0 overflow-hidden">
+                      {module.number === '🎁' ? (
+                          <Gift size={32} />
+                      ) : (
+                          <Image
+                              src="https://i.postimg.cc/cH2CBcgd/IMG-20250923-WA0072.webp"
+                              width={64}
+                              height={64}
+                              alt="Ícone do módulo"
+                              className="object-cover w-full h-full"
+                          />
+                      )}
                   </div>
                   <div className="grid gap-1 flex-1">
                       <h3 className="text-xl font-bold font-headline text-primary">{module.number !== '🎁' ? `Módulo ${module.number} - ${module.title}` : module.title}</h3>
