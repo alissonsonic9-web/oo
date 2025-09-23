@@ -14,7 +14,7 @@ const barChartData = [
 ];
 
 const satisfactionData = [{ name: 'Satisfação', value: 95, fill: 'hsl(var(--primary))' }];
-const retentionData = [{ name: 'Retenção', value: 87, fill: 'hsl(var(--chart-4))' }];
+const retentionData = [{ name: 'Retenção', value: 87, fill: 'hsl(var(--primary))' }];
 const supportData = [{ name: 'Suporte', value: 100, fill: 'hsl(var(--primary))' }];
 
 const stats = [
