@@ -28,7 +28,7 @@ export default function Pricing() {
                     <Card className="flex flex-col shadow-md">
                         <CardHeader className="pb-4">
                             <CardTitle className="font-headline text-primary">🟠 Pacote Básico</CardTitle>
-                            <div className="flex items-baseline gap-2">
+                            <div className="flex items-baseline gap-2 text-accent">
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$17,90</span>
                             </div>
                         </CardHeader>
@@ -53,7 +53,7 @@ export default function Pricing() {
                             <Star className="h-4 w-4" /> MAIS ESCOLHIDO
                         </div>
                         <CardHeader className="pb-4">
-                            <CardTitle className="font-headline text-accent">🔴 Pacote Premium</CardTitle>
+                            <CardTitle className="font-headline text-primary">🔴 Pacote Premium</CardTitle>
                             <div className="flex items-baseline gap-2 text-accent">
                                 <span className="text-4xl font-extrabold tracking-tight font-headline">R$29,90</span>
                                 <span className="text-xl font-medium text-muted-foreground line-through">R$197,00</span>
