@@ -17,7 +17,7 @@ export default function Home() {
     const element = document.getElementById(id);
     if (element) {
       // Adjust scroll position to account for the sticky countdown header
-      const headerOffset = 60; // Height of the countdown component
+      const headerOffset = 64; // Height of the countdown component
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex-grow bg-background">
+      <main className="flex-grow bg-background overflow-hidden">
         <Hero onCtaClick={() => handleScrollTo('pricing')} />
         <Curriculum />
         <Bonuses onCtaClick={() => handleScrollTo('pricing')} />
