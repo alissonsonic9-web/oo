@@ -77,7 +77,7 @@ export default function Curriculum() {
         <div className="mx-auto max-w-3xl pt-12">
           <Accordion type="single" collapsible className="w-full space-y-4">
             {modules.map((module) => (
-              <AccordionItem key={module.number} value={`item-${module.number}`} className="border-b-0 rounded-lg bg-card shadow-md data-[state=open]:shadow-xl transition-shadow">
+              <AccordionItem key={module.number} value={`item-${module.number}`} className="border-b-0 rounded-lg bg-card shadow-md data-[state=open]:shadow-xl transition-shadow overflow-hidden">
                 <AccordionTrigger className="flex items-center gap-4 p-6 text-left hover:no-underline">
                   <div className={`flex h-16 w-16 items-center justify-center rounded-md font-bold text-3xl font-headline flex-shrink-0 overflow-hidden transition-all shadow-[0_0_15px_hsl(var(--accent))] ${module.number !== '🎁' ? 'bg-black text-primary-foreground' : 'bg-primary text-primary-foreground'}`}>
                       {module.number === '🎁' ? (
