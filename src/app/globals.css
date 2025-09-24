@@ -84,3 +84,7 @@
     @apply border-border;
   }
 }
+
+* {
+  max-width: 100vw;
+}
