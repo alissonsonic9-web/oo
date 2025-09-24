@@ -24,7 +24,9 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased pt-16">
         <Countdown />
-        {children}
+        <div className="relative w-full overflow-x-hidden">
+          {children}
+        </div>
         <Toaster />
         <SocialProof />
       </body>
