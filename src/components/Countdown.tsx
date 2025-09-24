@@ -20,13 +20,7 @@ export default function Countdown() {
 
     return (
         <div 
-            className="bg-primary text-primary-foreground text-center py-4 text-xl font-bold animate-pulse-glow"
-            style={{
-                position: 'fixed',
-                top: 0,
-                width: '100%',
-                zIndex: 50
-            }}
+            className="bg-primary text-primary-foreground text-center py-4 text-xl font-bold fixed top-0 left-0 right-0 z-50"
         >
             <span>A oferta termina em </span>
             <span className="font-mono tracking-wider">{String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}</span>
