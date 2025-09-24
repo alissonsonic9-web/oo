@@ -11,7 +11,6 @@ import Marquee from '@/app/sections/Marquee';
 import Guarantee from '@/app/sections/Guarantee';
 import Faq from '@/app/sections/Faq';
 import Footer from '@/components/Footer';
-import Countdown from '@/components/Countdown';
 
 export default function Home() {
   const handleScrollTo = (id: string) => {
@@ -31,8 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <Countdown />
-      <main className="flex-grow bg-background pt-16">
+      <main className="flex-grow bg-background">
         <Hero onCtaClick={() => handleScrollTo('pricing')} />
         <Curriculum />
         <Bonuses onCtaClick={() => handleScrollTo('pricing')} />
