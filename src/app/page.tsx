@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Countdown />
-      <main className="flex-grow bg-background">
+      <main className="flex-grow bg-background pt-16">
         <Hero onCtaClick={() => handleScrollTo('pricing')} />
         <Curriculum />
         <Bonuses onCtaClick={() => handleScrollTo('pricing')} />
